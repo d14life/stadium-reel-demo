@@ -590,3 +590,8 @@ html.fp-on .dv-pill,.hud.jn-on~.dv-pill{display:none}
 .hb-fxs .hb-rd{display:block; margin:12px 0 0; color:var(--muted)}
 
 .hb-vk{position:absolute; z-index:5; right:5px; top:34px; width:22px; height:22px; display:grid; place-items:center; background:#000c; border-radius:50%}.hb-vk img,.hb-vk svg{width:16px; height:16px; object-fit:contain}
+/* story card (storycard.js): the preview beside Share / Save and «I posted» (fan.js storyBlock) */
+.hb-sc{display:grid; grid-template-columns:128px 1fr; gap:12px; align-items:start; margin:0 0 12px}
+.hb-sc-img{display:block; width:128px; height:auto; aspect-ratio:9/16; border:2px solid #F4F5F7; box-shadow:3px 3px 0 var(--jc); background:#111}
+.hb-sc-wait{display:grid; place-items:center; padding:8px; text-align:center; font-size:12px; color:var(--muted)}
+.hb-sc-acts{display:flex; flex-direction:column; gap:8px; min-width:0}.hb-sc-acts .fp-btn{width:100%; white-space:normal; line-height:1.15; padding:6px 10px}.hb-sc-acts .fp-note{margin:0}
