@@ -528,9 +528,6 @@ html.fp-on .dv-pill,.hud.jn-on~.dv-pill{display:none}
 .hb-opt:disabled{cursor:default}
 .hb-two{display:grid; grid-template-columns:1fr 1fr; gap:8px}.hb-two h4{font:700 13px var(--disp); text-transform:uppercase; margin-bottom:6px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
 .hb-two .hb-opt{padding:0 6px}.hb-two .hb-opt span{font-size:12px}
-.hb-potm{display:grid; grid-template-columns:auto minmax(0,1fr) auto; align-items:center; gap:10px; padding:10px 12px; margin-bottom:10px; background:var(--gold); color:#000; border:2px solid #000; box-shadow:4px 4px 0 #000}
-.hb-potm>b{font-size:26px}.hb-potm span{display:grid; min-width:0}.hb-potm span b{font-size:18px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}.hb-potm small{font:600 12px var(--body)}.hb-potm em{font:700 22px var(--disp); font-style:normal}
-.hb-star{color:var(--gold)!important}
 .hb-pl{text-decoration:underline; text-decoration-color:#555; text-underline-offset:2px}
 .hb-pp{width:100%; max-width:360px}
 .hb-fxs{display:grid; gap:6px}
@@ -599,3 +596,11 @@ html.fp-on .dv-pill,.hud.jn-on~.dv-pill{display:none}
 .hb-sc-img{display:block; width:128px; height:auto; aspect-ratio:9/16; border:2px solid #F4F5F7; box-shadow:3px 3px 0 var(--jc); background:#111}
 .hb-sc-wait{display:grid; place-items:center; padding:8px; text-align:center; font-size:12px; color:var(--muted)}
 .hb-sc-acts{display:flex; flex-direction:column; gap:8px; min-width:0}.hb-sc-acts .fp-btn{width:100%; white-space:normal; line-height:1.15; padding:6px 10px}.hb-sc-acts .fp-note{margin:0}
+/* fan-rules v1.8: «Your decisions» on the profile (hub-page.js decisionsBlock) */
+.hb-dec{margin:14px 0 4px}.hb-dec .fp-note{margin:2px 0 6px}
+.hb-cards.dc .hb-vn{height:5em; min-width:0; padding:0 4px; overflow-wrap:anywhere; font-size:14px}
+.hb-cards.dc .hb-vs{grid-template-columns:1fr}.hb-cards.dc .hb-vs dd{font-size:15px; text-align:center}
+.hb-go.dc{position:static; margin:6px 0 0; padding:10px 12px; border:2px solid #222}
+.hb-dh{margin:16px 0 6px; font:700 13px var(--body); letter-spacing:.08em; text-transform:uppercase; color:var(--gold)}
+.hb-dxi{margin:8px 0 6px}
+.hb-job{margin:4px 0 10px}
