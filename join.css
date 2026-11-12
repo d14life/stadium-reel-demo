@@ -598,9 +598,157 @@ html.fp-on .dv-pill,.hud.jn-on~.dv-pill{display:none}
 .hb-sc-acts{display:flex; flex-direction:column; gap:8px; min-width:0}.hb-sc-acts .fp-btn{width:100%; white-space:normal; line-height:1.15; padding:6px 10px}.hb-sc-acts .fp-note{margin:0}
 /* fan-rules v1.8: «Your decisions» on the profile (hub-page.js decisionsBlock) */
 .hb-dec{margin:14px 0 4px}.hb-dec .fp-note{margin:2px 0 6px}
-.hb-cards.dc .hb-vn{height:5em; min-width:0; padding:0 4px; overflow-wrap:anywhere; font-size:14px}
-.hb-cards.dc .hb-vs{grid-template-columns:1fr}.hb-cards.dc .hb-vs dd{font-size:15px; text-align:center}
+.hb-cards.dc .hb-vn{height:5em; min-width:0; padding:0 4px; overflow-wrap:normal; word-break:normal; hyphens:none; font-size:min(14px,calc(140px / max(var(--w,1),10)))}   /* wraps between words only; a long word (e.g. Schweinsteiger, 14) shrinks the font to fit */
+.hb-cards.dc .hb-vs{grid-template-columns:1fr}.hb-cards.dc .hb-vs dd{font-size:15px; text-align:center}.hb-cards.dc .hb-vs dt{text-align:center; white-space:normal; letter-spacing:.02em}   /* RU «ВЫБОР ФАНАТОВ» wraps inside the card */
 .hb-go.dc{position:static; margin:6px 0 0; padding:10px 12px; border:2px solid #222}
 .hb-dh{margin:16px 0 6px; font:700 13px var(--body); letter-spacing:.08em; text-transform:uppercase; color:var(--gold)}
 .hb-dxi{margin:8px 0 6px}
 .hb-job{margin:4px 0 10px}
+
+/* ================= Matchday night (2026-11-12, Damir's direction 1): the fantasy hub restyled. Tokens set once here; club colour (--jc, --jc-ink, --jc-hi from fan.js) on actions only,
+   gold = «your pick». Backgrounds are captures of our own stadium (assets/night/). The Ticket card (.tk*) is untouched. Restyle only: no markup or behaviour change. */
+.fp{--bg:#05070d; --glass:rgba(13,17,30,.66); --glass-hi:rgba(22,28,46,.78); --glass-lo:rgba(255,255,255,.05); --line:rgba(255,255,255,.14); --line-hi:rgba(255,255,255,.28);
+  --muted:#AEB6C6; --ok:#7CE3A8; --r:14px; --r-s:10px; --blur:blur(14px) saturate(1.3); --jc-ink:#fff; --jc-hi:var(--jc);
+  background:var(--bg)}
+/* the stand scrolls away with the page (attachment local), so text further down never sits on the bright crowd */
+.fp .fp-main{background:linear-gradient(180deg,rgba(5,7,13,.5) 0,rgba(5,7,13,.82) 130px,var(--bg) 250px),url(assets/night/stand.webp) center top/100% auto no-repeat; background-attachment:local}
+.fp[data-page=fan] .fp-main{background:linear-gradient(180deg,rgba(5,7,13,.4) 0,rgba(5,7,13,.12) 60px,rgba(5,7,13,.45) 150px,rgba(5,7,13,.86) 215px,var(--bg) 290px),linear-gradient(100deg,color-mix(in srgb,var(--jc) 34%,transparent),transparent 62%) 0 0/100% 290px no-repeat,url(assets/night/stand.webp) center top/100% auto no-repeat; background-attachment:local}
+.fp .sr{position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap}
+.fp-glass,.fp-stats>div,.fp-dl,.fp-last,.hb-mgr,.hb-mh,.cp-tie,.cp-live,.cp-head,.hb-fx,.hb-big,.fp-bench,.hb-how table,.hb-go.dc{background:var(--glass); border:1px solid var(--line); border-radius:var(--r); -webkit-backdrop-filter:var(--blur); backdrop-filter:var(--blur)}
+/* top bar: glass back pill + title with a club tick */
+.fp-bar{background:transparent; border:0}
+.fp-back{min-height:40px; padding:0 14px; border:1px solid var(--line)!important; border-radius:999px; background:var(--glass)!important; -webkit-backdrop-filter:var(--blur); backdrop-filter:var(--blur); font:600 13px var(--body); text-transform:none}
+.fp-t{background:none; border:0; transform:none; padding:0; text-shadow:0 2px 12px rgba(0,0,0,.6); letter-spacing:.04em; display:flex; align-items:center; gap:8px}
+.fp-t::before{content:""; width:4px; height:16px; background:var(--jc-hi)}
+/* bottom nav: a floating rounded glass bar with icons */
+.fp-tabs{margin:0 10px calc(8px + env(safe-area-inset-bottom)); padding:0; border:1px solid var(--line); border-radius:18px; background:var(--glass-hi); -webkit-backdrop-filter:var(--blur); backdrop-filter:var(--blur); overflow:hidden}
+.fp-tabs>*{min-height:58px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px; font:600 11px var(--body)!important; text-transform:none; letter-spacing:0!important; color:var(--muted); position:relative}
+.fp-tabs>*::before{content:""; width:20px; height:20px; flex:none; background:currentColor; -webkit-mask:var(--ic) center/contain no-repeat; mask:var(--ic) center/contain no-repeat}
+.fp-tabs>[aria-current=page]{background:transparent; color:#fff; box-shadow:none}
+.fp-tabs>[aria-current=page]::after{content:""; position:absolute; bottom:6px; width:18px; height:3px; border-radius:2px; background:var(--jc-hi)}
+.fp-tabs>[href="#/me"]{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.9' stroke-linecap='round'%3E%3Ccircle cx='12' cy='8' r='4'/%3E%3Cpath d='M4 21c1-4 4-6 8-6s7 2 8 6'/%3E%3C/svg%3E")}
+.fp-tabs>[href="#/xi"]{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.9'%3E%3Crect x='4' y='3' width='16' height='18' rx='2'/%3E%3Cpath d='M4 12h16M12 3v4M12 17v4'/%3E%3C/svg%3E")}
+.fp-tabs>[href="#/cup"]{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.9' stroke-linejoin='round'%3E%3Cpath d='M7 4h10v5a5 5 0 0 1-10 0zM12 14v4M8 21h8M7 6H4a3 3 0 0 0 3 4M17 6h3a3 3 0 0 1-3 4'/%3E%3C/svg%3E")}
+.fp-tabs>[href="#/more"]{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='5' cy='12' r='2'/%3E%3Ccircle cx='12' cy='12' r='2'/%3E%3Ccircle cx='19' cy='12' r='2'/%3E%3C/svg%3E")}
+.fp-tabs>button{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.9'%3E%3Cellipse cx='12' cy='12' rx='9' ry='5'/%3E%3Cellipse cx='12' cy='12' rx='4' ry='2'/%3E%3C/svg%3E")}
+/* buttons: glass; primary = club colour; pressed = white (state) */
+.fp-btn{border-radius:var(--r-s); background:var(--glass)!important; -webkit-backdrop-filter:var(--blur); backdrop-filter:var(--blur); border:1px solid var(--line-hi)!important; font-size:14px; letter-spacing:.02em}
+.fp-btn[aria-pressed=true]{background:#F4F5F7!important; color:#000; border-color:#F4F5F7!important; box-shadow:none}
+.fp-btn.pri{background:var(--jc)!important; color:var(--jc-ink); border-color:transparent!important; box-shadow:inset 0 0 0 1px rgba(255,255,255,.22),0 8px 22px color-mix(in srgb,var(--jc) 40%,transparent)}
+.fp-btn.pri:disabled{box-shadow:inset 0 0 0 1px rgba(255,255,255,.22)}
+.fp-btn:disabled{opacity:.6}
+.fp-x,.tk-fold{border-radius:var(--r-s); border:1px solid var(--line-hi)!important}
+/* section heads: white, quiet rule */
+.fp-h{color:#fff; letter-spacing:.12em}.fp-h::after{background:var(--line)}
+.fp-none{border:1px dashed var(--line-hi); border-radius:var(--r); background:var(--glass-lo)}
+.fp-note{color:var(--muted)}
+.fp-toast{border:1px solid var(--line-hi); border-radius:999px; background:var(--glass-hi); -webkit-backdrop-filter:var(--blur); backdrop-filter:var(--blur); box-shadow:0 8px 24px rgba(0,0,0,.5)}
+/* profile: the stadium hero shows through, avatar ringed in the club colour */
+.fp-hero{background:none!important; border:0; padding:56px 16px 14px; text-shadow:0 1px 2px #000,0 2px 12px rgba(0,0,0,.8)}
+.fp-ava{width:80px; height:80px; border:3px solid var(--jc-hi); box-shadow:0 0 0 3px rgba(255,255,255,.14),0 10px 28px rgba(0,0,0,.6)}
+.fp-id p,.fp-id small{text-shadow:0 1px 8px rgba(0,0,0,.9)}
+.fp-tier{border-radius:6px; border:1px solid rgba(255,255,255,.4); background:rgba(5,7,13,.6); color:#fff; padding:1px 7px}
+.fp-tier[data-t=president],.fp-tier[data-t=manager]{background:linear-gradient(rgba(245,181,46,.18),rgba(245,181,46,.18)),rgba(5,7,13,.75); border-color:rgba(245,181,46,.65); color:var(--gold)}
+.fp-stats{gap:0; border-radius:var(--r); overflow:hidden}
+.fp-stats>div{border-radius:0; border-width:0 0 0 1px; padding:10px 12px}
+.fp-stats>div:first-child{border-left:0}
+.fp-stats{background:var(--glass); border:1px solid var(--line); -webkit-backdrop-filter:var(--blur); backdrop-filter:var(--blur)}
+.fp-stats>div{background:transparent; -webkit-backdrop-filter:none; backdrop-filter:none}
+.fp-bar2{height:5px; border:0; border-radius:3px; background:rgba(255,255,255,.12); overflow:hidden}
+.fp-bar2 i{background:linear-gradient(90deg,var(--jc-hi),color-mix(in srgb,var(--jc-hi) 60%,#fff))}
+.fp-badges li{background:var(--glass); color:#fff; border:1px solid var(--line); border-radius:999px; box-shadow:none}
+.fp-badges svg,.fp-badges [data-b=top] svg,.fp-badges [data-b=first] svg{color:var(--gold)}
+.fp-hist li{border-bottom:1px solid var(--line)}
+.fp-hist em{color:var(--ok)}
+/* «My XI»: glass head, floodlit pitch of our own grass */
+.fp-dl,.fp a.fp-dl{background:var(--glass); color:var(--text); box-shadow:none}
+.fp-dl small{color:var(--muted)}
+.fp-dl.shut{background:color-mix(in srgb,var(--red) 35%,var(--glass)); border-color:var(--red)}
+.fp-last{border-color:var(--line)}
+.fp-last b{color:var(--gold)}
+.fp-seg{border:1px solid var(--line); border-radius:999px; padding:3px; background:var(--glass)}
+.fp-seg>*{border-radius:999px; min-height:36px; font:600 13px var(--body)!important; text-transform:none!important}
+.fp-seg>[aria-selected=true]{background:#F4F5F7; color:#000}
+.fp-forms button{border:1px solid var(--line-hi)!important; border-radius:var(--r-s); background:var(--glass-lo)}
+.fp-forms button[aria-pressed=true]{background:#F4F5F7; color:#000; border-color:#F4F5F7!important; box-shadow:none}
+.fp-pitch{--fl:rgba(255,252,235,.26); background:
+  radial-gradient(70% 34% at 4% 0,var(--fl),transparent 70%),radial-gradient(70% 34% at 96% 0,var(--fl),transparent 70%),
+  radial-gradient(70% 34% at 4% 100%,var(--fl),transparent 70%),radial-gradient(70% 34% at 96% 100%,var(--fl),transparent 70%),
+  radial-gradient(80% 46% at 50% 50%,rgba(255,255,235,.12),transparent 75%),
+  radial-gradient(130% 70% at 50% 50%,transparent 55%,rgba(2,10,6,.5)),
+  repeating-linear-gradient(180deg,rgba(0,12,4,.16) 0 84px,rgba(220,255,200,.07) 84px 168px),   /* mowing stripes, in phase with the tile (dark half on top) */
+  url(assets/night/grass.webp) center top/100% 168px repeat-y,#2f8a3c;
+  border-top:1px solid var(--line); border-bottom:1px solid var(--line)}
+.tk-marks{filter:drop-shadow(0 0 3px rgba(255,255,255,.55))}
+.tk-marks *{stroke:#fff; stroke-width:.45}
+.tk-ghost{border-radius:.8em; background:rgba(5,10,20,.45); border-color:rgba(255,255,255,.75)}
+.tk-sub{border-radius:.4em; background:rgba(5,7,13,.85)}
+.fp-bench{box-shadow:none; padding:10px 6px 12px}
+.fp-bench h3{color:#fff}
+.fp-save{margin:0 10px 8px; padding:8px 8px 8px 14px; border:1px solid var(--line); border-radius:var(--r); background:var(--glass-hi); -webkit-backdrop-filter:var(--blur); backdrop-filter:var(--blur)}
+.tk-tray{background:var(--glass-hi); border-top:1px solid var(--line); -webkit-backdrop-filter:var(--blur); backdrop-filter:var(--blur)}
+.tk-club{border-radius:999px; padding:0 8px}
+.tk-chips button{border:1px solid var(--line-hi)!important; border-radius:999px; padding:0 10px}
+.tk-chips [aria-pressed=true]{background:#F4F5F7; color:#000}
+.tk-clubs button{border-radius:var(--r-s); background:var(--glass-lo); border:1px solid var(--line)!important}
+.tk-item small{border-radius:.4em}
+.tk-ov{background:rgba(3,5,10,.86); -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px)}
+.tk-ov>.fp-x{background:var(--glass-hi); border-radius:999px; box-shadow:none}
+.tk-note{color:var(--gold)}
+/* leaderboards: glass rows; your row in gold */
+.fp-lr{background:var(--glass)!important; border:1px solid var(--line); border-left:4px solid var(--c); border-radius:var(--r-s)}
+.fp-lr img{border:2px solid rgba(255,255,255,.2)}
+.fp-lr.me{background:rgba(245,181,46,.13)!important; color:var(--text); border-color:var(--gold); border-left-color:var(--c); box-shadow:0 0 18px rgba(245,181,46,.16)}
+.fp-lr.me .rk,.fp-lr.me .nm small{color:var(--muted)}
+.fp-lr .nm small{flex-wrap:wrap; row-gap:3px}   /* RU: «лучший фанат» + tier chip wrap instead of clipping */
+.fp-mine{background:linear-gradient(transparent,var(--bg) 30%)}
+/* cup */
+.cp-tie{border-radius:var(--r-s)}
+.cp-tie.live{border-color:var(--jc-hi); box-shadow:0 0 0 1px var(--jc-hi) inset}
+.cp-live{border-color:var(--jc-hi); box-shadow:0 0 24px color-mix(in srgb,var(--jc) 30%,transparent)}
+.cp-sup{height:8px; border:0; border-radius:4px; background:rgba(255,255,255,.85); overflow:hidden}
+.cp-sup i{background:var(--jc)}
+.cp-out{border:1px solid var(--gold); border-radius:var(--r); background:rgba(245,181,46,.1)}
+.cp-champ{border:0; border-radius:var(--r)}
+.cp-goals li,.cp-xis li{border-bottom:1px solid var(--line)}
+.cp-xis{padding:10px; background:var(--glass); border:1px solid var(--line); border-radius:var(--r)}
+/* hub: manager, player page, votes, fixtures, More */
+.hb-mgr{border-left:3px solid var(--jc-hi)}
+.hb-mgr .fp-stats>div{background:transparent}
+.hb-mh{box-shadow:none}
+.hb-mh small{color:var(--muted)}
+.hb-in{border:1px solid var(--line-hi); border-radius:var(--r-s); background:rgba(255,255,255,.92); box-shadow:none}
+.hb-opt{background:var(--glass)!important; border:1px solid var(--line)!important; border-radius:var(--r-s)}
+.hb-opt[aria-pressed=true]{border-color:var(--gold)!important; box-shadow:0 0 16px rgba(245,181,46,.18)}
+.hb-fx{border-radius:var(--r-s)}
+.hb-fx.mine{border-color:var(--jc-hi); box-shadow:0 0 0 1px var(--jc-hi) inset}
+.hb-fx em{border-radius:6px; background:rgba(0,0,0,.45); border:1px solid var(--line)}
+.hb-fx.done em{background:#F4F5F7; color:#000; border-color:#F4F5F7}
+.hb-big{box-shadow:none; border-left:3px solid var(--jc-hi)}
+.hb-big i{color:var(--jc-hi)}
+.hb-vc{background:var(--glass)!important; border:1px solid var(--line)!important; border-radius:var(--r)}
+.hb-vc.on{border-color:var(--gold)!important; background:rgba(245,181,46,.12)!important; box-shadow:0 0 18px rgba(245,181,46,.2)}
+.hb-vc.mine:not(.on){border-color:var(--line-hi)!important}
+.hb-tick{border-radius:50%; border:0; right:4px; top:4px}
+.hb-mine{border-radius:6px; border:0}
+.hb-vbar{border:0; border-radius:5px; background:rgba(0,0,0,.45); overflow:hidden}
+.hb-go{background:color-mix(in srgb,var(--bg) 88%,transparent); border-top:1px solid var(--line); -webkit-backdrop-filter:var(--blur); backdrop-filter:var(--blur)}
+.hb-go small{color:var(--gold)}
+.hb-go.dc{border:1px solid var(--line)}
+.hb-sc-img{border:1px solid var(--line-hi); border-radius:var(--r-s); box-shadow:0 10px 26px rgba(0,0,0,.5)}
+.hb-dh{color:#fff}
+.hb-vk{border-radius:50%}
+/* Club XI: how it was picked */
+.hb-how{margin-top:8px}
+.hb-why-p{margin:12px 0 6px; font:700 12px var(--body); letter-spacing:.1em; text-transform:uppercase; color:var(--muted)}
+.hb-why{width:100%; border-collapse:separate; border-spacing:0; overflow:hidden; font-size:13px}
+.hb-why th,.hb-why td{padding:7px 6px; text-align:right; border-top:1px solid var(--line); white-space:nowrap}
+.hb-why thead th{border-top:0; font:600 10px var(--body); letter-spacing:.06em; text-transform:uppercase; color:var(--muted)}
+.hb-why th:nth-child(2){text-align:left; width:100%; white-space:normal; overflow-wrap:anywhere; font-weight:600}
+.hb-why td:first-child{width:22px; text-align:center; padding-right:0}
+.hb-why tr.in td:first-child i{font-style:normal; color:var(--gold); font-weight:700}
+.hb-why tr.in{background:rgba(245,181,46,.08)}
+.hb-why tr.out{opacity:.45}
+
+.hb-why small{font-size:11px; color:var(--muted); text-decoration:none}
+@media (prefers-reduced-motion: reduce){ .fp *{transition:none!important; animation:none!important} }
