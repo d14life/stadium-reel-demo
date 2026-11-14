@@ -752,3 +752,184 @@ html.fp-on .dv-pill,.hud.jn-on~.dv-pill{display:none}
 
 .hb-why small{font-size:11px; color:var(--muted); text-decoration:none}
 @media (prefers-reduced-motion: reduce){ .fp *{transition:none!important; animation:none!important} }
+
+/* ================= Hub system (2026-11-14, owner: 'spacing different everywhere', 'looks shit on PC as it was made for mobile').
+   One spacing scale (--s1..--s8), one type scale (title / heading / body / small), one card (glass, 1px line, --r, no shadow), one button height (44, compact controls 36).
+   Then the desktop layout (>= 1024 px: side nav, content up to 1320 px, XI pitch | picker, 2-3 column pages) and a tidier tablet (768-1023). Layout wrappers in the markup
+   (.fp-cols, .fp-xi, .fp-benches, .hb-pcols, .hb-fcols, .hb-why-g, .cp-rounds) are display: contents below 1024 px. */
+.fp{--s1:4px; --s2:8px; --s3:12px; --s4:16px; --s6:24px; --s8:32px; --gut:var(--s4); --pad:var(--s3); --gap:var(--s2); --sec:var(--s6);
+  --fs-title:20px; --fs-h:14px; --fs-body:15px; --fs-small:12px; --btn:44px; --ctl:36px}
+.fp-cols,.fp-col,.fp-xi,.fp-benches,.hb-pcols,.hb-pside,.hb-pbody,.hb-fcols,.hb-fcols>div,.hb-why-g,.hb-why-c,.cp-rounds,.cp-rd{display:contents}
+.fp .fp-main{padding-top:var(--s4); padding-bottom:var(--s6)}
+/* type: page title, section heading (uppercase, club-colour bar, same on every tab), sub-heading / label, body, small */
+.fp .fp-t{font-size:var(--fs-title)}
+.fp .fp-h{display:flex; align-items:center; gap:var(--s2); margin:var(--sec) 0 var(--s3); font:700 var(--fs-h)/1.2 var(--disp); letter-spacing:.06em; text-transform:uppercase; color:#fff}
+.fp .fp-h::before{content:""; flex:none; width:3px; height:14px; border-radius:2px; background:var(--jc-hi)}
+.fp .fp-h::after{content:none}
+.fp .hb-mgr>.fp-h:first-child{margin-top:0}
+.fp .hb-dh,.fp .hb-why-p,.fp .hb-rd,.fp .fp-bench h3,.fp .cp-xis h4,.fp .hb-two h4,.fp .fp-forms>span,.fp .hb-ch,.fp .fp-mine::before{margin:var(--s4) 0 var(--s2); padding:0; font:700 var(--fs-small)/1.3 var(--body); letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
+.fp .hb-ch{gap:var(--s2); color:var(--text)}
+.fp .fp-note,.fp .cp-note,.fp .hb-hint{margin:0 0 var(--s3); font-size:var(--fs-small); line-height:1.4}
+.fp .fp-stats dt,.fp .fp-stats small,.fp .hb-mh small,.fp .hb-go small,.fp .cp-tie small,.fp .hb-fx small,.fp .fp-tier,.fp .tk-est,.fp .hb-why small,.fp .cp-xis li,.fp .fp-dl small,.fp .hb-big small{font-size:var(--fs-small)}
+.fp .hb-why thead th{font-size:11px}
+.fp .hb-vs dt{font-size:11px}
+.fp .fp-tabs>*{font-size:var(--fs-small)!important}
+/* one card: glass, 1px line, one radius, one padding, no offset shadow; one gap between cards */
+.fp .fp-dl,.fp .fp-last,.fp .hb-mgr,.fp .hb-mh,.fp .cp-live,.fp .cp-head,.fp .hb-big,.fp .fp-bench,.fp .cp-xis,.fp .hb-go.dc,.fp .cp-out,.fp .cp-champ,.fp .fp-none,.fp .hb-sc{padding:var(--pad); border-radius:var(--r); box-shadow:none; margin:0 0 var(--gap)}
+.fp .fp-dl,.fp .fp-last,.fp .hb-mgr,.fp .hb-mh,.fp .cp-head,.fp .hb-big,.fp .fp-bench,.fp .cp-xis,.fp .hb-go.dc,.fp .fp-none{border:1px solid var(--line)}
+.fp .cp-tie,.fp .hb-fx{padding:var(--s2) var(--pad); border-radius:var(--r-s); margin:0}
+.fp .fp-none{background:var(--glass-lo); text-align:center}
+.fp .hb-mgr,.fp .hb-big{border-left-width:1px; border-left-color:var(--line)}
+.fp .fp-stats>div{padding:var(--pad)}
+.fp .hb-mgr{margin-top:var(--sec)}
+.fp .hb-mh{min-height:var(--btn); padding-block:var(--s2)}
+.fp .fp-dl,.fp .fp-last{min-height:56px; padding-block:var(--s2)}
+.fp .fp-last{margin-top:0}
+.fp .hb-dxi{margin:0 0 var(--gap)}
+.fp .hb-job{margin:0 0 var(--s3)}
+.fp .cp-next,.fp .cp-champ,.fp .cp-out,.fp .cp-live{margin-bottom:var(--s3)}
+.fp .hb-fx em{border:0}
+/* lists and rows */
+.fp .cp-grid,.fp .hb-fxs,.fp .hb-opts,.fp .hb-more,.fp .hb-two{gap:var(--gap)}
+.fp .hb-more{padding-top:0}
+.fp .fp-lb{display:grid; gap:var(--gap)}
+.fp .fp-lb li{margin:0}
+.fp .fp-lr{gap:var(--s3); padding:var(--s2) var(--s3) var(--s2) var(--s2)}
+.fp .fp-hist li{padding:var(--s3) 0}
+.fp .fp-hist li:has(>.hb-row){padding:0}
+.fp .cp-goals li{padding:var(--s2) 0}
+.fp .cp-xis li{padding:var(--s1) 0}
+.fp .hb-why th,.fp .hb-why td{padding:var(--s2) var(--s2)}
+.fp .hb-why td:first-child{padding-right:0}
+.fp .hb-fxs .hb-rd{margin:var(--s3) 0 0}
+.fp .hb-fxs .hb-rd:first-child{margin-top:0}
+.fp .fp-badges{gap:var(--s2)}
+.fp .fp-badges li{padding:var(--s1) var(--s3)}
+/* profile */
+.fp .fp-hero{padding-bottom:var(--s3)}
+.fp .fp-acts{gap:var(--s2); margin:var(--s3) 0 0}
+.fp .fp-tierline{margin:var(--sec) 0 var(--s3)}
+.fp .fp-lv{margin-top:var(--s2)}
+.fp .fp-lv small{margin-top:var(--s1)}
+.fp .hb-team{gap:var(--s3); margin-bottom:var(--s3)}
+.fp .hb-team .fp-btn{min-height:var(--btn)}
+.fp .hb-form{gap:var(--s2); margin-bottom:var(--s1)}
+.fp .hb-vote{margin-bottom:var(--s2)}
+.fp .hb-go.dc{margin:var(--s2) 0 0}
+/* «My XI» head */
+.fp .fp-seg{margin:var(--s3) 0}
+.fp .fp-seg>*,.fp .fp-forms button,.fp .tk-chips button,.fp .tk-club,.fp .tk-fold{min-height:var(--ctl)}
+.fp .fp-forms{gap:var(--s2); margin-bottom:var(--s3)}
+.fp .fp-forms>span{margin:0}
+.fp .fp-forms>div{gap:var(--s2); padding:0}
+.fp .fp-bench{margin-top:var(--s3); padding:var(--s3) var(--s2)}
+.fp .fp-bench h3{margin:0; padding:0 var(--s1) var(--s2)}
+.fp .tk-tray header{gap:var(--s2); padding:0 var(--s2)}
+.fp .tk-chips{gap:var(--s1)}
+/* the match page */
+.fp .cp-replay{margin:var(--s3) 0 var(--s2)}
+.fp .cp-xis{gap:var(--s3)}
+
+/* tablet (768-1023): one centred column (as before), the bottom nav no wider than the column */
+@media (min-width:768px) and (max-width:1023px){
+  .fp .fp-tabs{width:min(560px,calc(100% - 2 * var(--s4))); margin-inline:auto}
+  .fp .fp-save{width:min(560px,calc(100% - 2 * var(--s4))); margin-inline:auto; padding-left:var(--s3); padding-right:var(--s2)}
+}
+
+/* desktop (>= 1024): side nav, wide content, columns */
+@media (min-width:1024px){
+  .fp{--gut:var(--s8); --side:224px; display:grid; grid-template-columns:var(--side) minmax(0,1fr); grid-template-rows:64px minmax(0,1fr); grid-template-areas:"nav bar" "nav main"}
+  .fp-cols,.fp-xi,.fp-benches,.hb-pcols,.hb-pside,.hb-pbody,.hb-fcols,.hb-why-g,.cp-rounds{display:block}
+  .fp-col,.hb-fcols>div,.hb-why-c,.cp-rd{display:block; min-width:0}
+  .fp .fp-bar{grid-area:bar; height:64px; padding:0 max(var(--gut),calc((100% - 1320px) / 2)); grid-template-columns:minmax(0,1fr) auto}
+  .fp .fp-bar>i{display:none}
+  .fp .fp-t{grid-column:1; grid-row:1; justify-self:start; font-size:24px}
+  .fp .fp-back{grid-column:2; grid-row:1; justify-self:end}
+  .fp .fp-main{grid-area:main; padding:var(--s4) max(var(--gut),calc((100% - 1320px) / 2)) var(--s8)}
+  .fp .fp-hero{margin:calc(-1 * var(--s4)) 0 0; padding:var(--s8) 0 var(--s4)}
+  .fp .fp-ava{width:96px; height:96px}
+  .fp .fp-id h2{font-size:32px}
+  /* side nav */
+  .fp .fp-tabs{grid-area:nav; flex-direction:column; gap:var(--s1); margin:0; padding:var(--s4) var(--s3); border:0; border-right:1px solid var(--line); border-radius:0; background:rgba(8,11,20,.88)}
+  .fp .fp-tabs::before{content:""; flex:none; height:48px}
+  .fp .fp-tabs>*{flex:none; min-height:48px; flex-direction:row; justify-content:flex-start; gap:var(--s3); padding:0 var(--s4); border-radius:var(--r-s); font:600 15px var(--body)!important; color:var(--muted); transition:background .15s ease-out,color .15s ease-out}
+  .fp .fp-tabs>*:hover{background:var(--glass-lo); color:#fff}
+  .fp .fp-tabs>[aria-current=page]{background:var(--glass-lo); color:#fff}
+  .fp .fp-tabs>[aria-current=page]::after{left:0; top:12px; bottom:12px; width:3px; height:auto}
+  .fp .fp-tabs>button{margin-top:auto}
+  .fp .fp-tabs>*:focus-visible{outline:2px solid #fff; outline-offset:-2px}
+  .fp-toast{bottom:var(--s8)}
+  /* profile: decisions | stats, manager, badges, history */
+  .fp .fp-acts{max-width:520px}
+  .fp-cols{display:grid; grid-template-columns:minmax(0,3fr) minmax(0,2fr); gap:var(--s8); align-items:start}
+  .fp-cols:has(>.fp-col:empty){grid-template-columns:minmax(0,1fr)}
+  .fp-col:empty{display:none}
+  .fp-col>:first-child{margin-top:var(--sec)}
+  .fp-col .hb-cards{flex-wrap:wrap; overflow:visible; margin:0; padding:var(--s1) 0 var(--s3)}
+  /* «My XI»: head in two columns, the pitch at its true shape with the bench beside it, the picker in a right-hand column */
+  .fp[data-page=xi] .fp-main{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); column-gap:var(--s3); align-content:start}
+  .fp[data-page=xi] .fp-main>*{grid-column:1 / -1}
+  .fp[data-page=xi] .fp-main>.fp-dl,.fp[data-page=xi] .fp-main>.fp-last,.fp[data-page=xi] .fp-main>.fp-seg,.fp[data-page=xi] .fp-main>.fp-forms{grid-column:auto; align-self:start}
+  .fp[data-page=xi] .fp-main>.fp-seg{margin:0 0 var(--s3)}
+  .fp[data-page=xi]:has(.tk-tray){grid-template-columns:var(--side) minmax(0,1fr) 400px; grid-template-rows:64px minmax(0,1fr) auto; grid-template-areas:"nav bar bar" "nav main tray" "nav main save"}
+  .fp[data-page=xi]:has(.tk-tray) .fp-bar,.fp[data-page=xi]:has(.tk-tray) .fp-main{padding-left:var(--s8); padding-right:var(--s6)}
+  .fp-xi{display:grid; grid-template-columns:minmax(0,560px) minmax(180px,1fr); gap:var(--s6); align-items:start; margin-top:var(--s3)}
+  .fp .fp-pitch{width:100%; min-height:0; aspect-ratio:5 / 9; margin:0; padding:var(--s6) var(--s1) var(--s4); font-size:9px; border:1px solid var(--line); border-radius:var(--r); overflow:hidden}
+  .fp .fp-pitch .tk-marks{width:auto; height:calc(100% - 16px); aspect-ratio:1 / 2; left:50%; translate:-50% 0}   /* the lines keep the 60 x 120 m shape; the grass runs past the touchlines */
+  .fp-benches .fp-bench{margin:0 0 var(--gap)}
+  .fp-benches .fp-bench>div{flex-wrap:wrap; justify-content:center; gap:var(--s6) var(--s3)}
+  .fp-benches .fp-bench .tk-lg p,.fp-benches .fp-bench>div>p{flex-basis:100%; text-align:center}
+  .fp .tk-tray{grid-area:tray; display:flex; flex-direction:column; min-height:0; padding:var(--s4) 0 0; border-top:0; border-left:1px solid var(--line); font-size:6.6px}
+  .fp .tk-tray header{flex-wrap:wrap; padding:0 var(--s4)}
+  .fp .tk-chips{flex:1 1 100%; order:3; flex-wrap:wrap; overflow:visible}
+  .fp .tk-club{flex:1}
+  .fp .tk-note{padding:var(--s2) var(--s4) 0}
+  .fp .tk-list{flex:1; min-height:0; flex-wrap:wrap; justify-content:center; align-content:flex-start; gap:2.4em 1.6em; overflow-x:hidden; overflow-y:auto; touch-action:pan-y; padding:3.2em var(--s4) var(--s4); scrollbar-width:thin}
+  .fp .tk-clubs{flex:1; max-height:none; padding:var(--s3) var(--s4)}
+  .fp .fp-save{grid-area:save; margin:0 var(--s4) var(--s4); padding:var(--s2) var(--s2) var(--s2) var(--s3)}
+  .fp .fp-save small{max-width:160px}
+  /* club XI: pitch | how it was picked, the four position tables in a 2 x 2 grid */
+  .fp-xi:has(.hb-how){grid-template-columns:minmax(0,480px) minmax(0,1fr)}
+  .fp-benches>.fp-note:first-child{margin-top:0}
+  .hb-how{margin-top:0}
+  .hb-how>.fp-h{margin-top:0}
+  .hb-why-g{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:var(--s3) var(--s4)}
+  .hb-why-c .hb-why-p{margin-top:0}
+  /* player: the card on the left, the numbers on the right */
+  .hb-pcols{display:grid; grid-template-columns:340px minmax(0,1fr); gap:var(--s8); align-items:start}
+  .hb-pside{position:sticky; top:0; padding-top:var(--s4)}
+  .hb-pbody>.fp-h:first-child{margin-top:var(--s6)}
+  .fp .hb-card,.fp .hb-card .tk-big{font-size:12px}
+  .hb-pbody .fp-stats{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+  /* fixtures: deadline on top, fixtures (two columns of cards) | injuries */
+  .fp[data-page=fixtures] .fp-main>.fp-dl{max-width:560px}
+  .hb-fcols{display:grid; grid-template-columns:minmax(0,3fr) minmax(0,2fr); gap:var(--s8); align-items:start}
+  .hb-fxs{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hb-fxs .hb-rd{grid-column:1 / -1}
+  /* leaders: two columns, read down then across */
+  .fp[data-page=leaders] .fp-seg{max-width:480px}
+  .fp .fp-lb{grid-template-columns:1fr 1fr; column-gap:var(--s4)}   /* ranks read across: 1 2 / 3 4 */
+  .fp-mine .fp-lb{grid-template-columns:1fr; max-width:calc(50% - var(--s2))}
+  /* cup: the rounds as bracket columns, ties spread to meet the next round */
+  .fp .cp-next,.fp .cp-out,.fp .cp-champ,.fp .cp-live{max-width:560px}
+  .cp-rounds{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:var(--s4); align-items:stretch}
+  .cp-rd{display:flex; flex-direction:column}
+  .cp-rd .cp-grid{flex:1; grid-template-columns:1fr; align-content:space-around}
+  /* More: three cards in a row */
+  .fp .hb-more{grid-template-columns:repeat(3,minmax(0,1fr))}
+  /* the enlarged card overlay keeps to the content area */
+  .fp .tk-ov{grid-area:1 / 2 / -1 / -1}
+}
+/* 1024-1279: a narrow icon rail, a narrower picker; the bench drops under the pitch */
+@media (min-width:1024px) and (max-width:1279px){
+  .fp{--side:84px}
+  .fp .fp-tabs{padding:var(--s4) var(--s2)}
+  .fp .fp-tabs>*{flex-direction:column; justify-content:center; gap:var(--s1); padding:var(--s2) 0; font-size:var(--fs-small)!important}
+  .fp[data-page=xi]:has(.tk-tray){grid-template-columns:var(--side) minmax(0,1fr) 340px}
+  .fp[data-page=xi]:has(.tk-tray) .fp-bar,.fp[data-page=xi]:has(.tk-tray) .fp-main{padding-left:var(--s6); padding-right:var(--s4)}
+  .fp-xi,.fp-xi:has(.hb-how){grid-template-columns:minmax(0,1fr)}
+  .fp .fp-pitch{max-width:560px; justify-self:center}
+  .hb-pcols{grid-template-columns:300px minmax(0,1fr)}
+}
+
+@media (min-width:768px){ .fp .hb-cards{font-size:10px} .fp .hb-cards.dc .hb-vn{font-size:min(14px,calc(165px / max(var(--w,1),10)))} }   /* tablet+: wider cards keep a long legend name at 11px+ */
