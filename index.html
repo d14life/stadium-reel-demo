@@ -9,10 +9,10 @@
 <title>Intergalactic Stadium</title>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" crossorigin>
-<link rel="preload" as="script" crossorigin href="js/main.js?v=39zg">
-<link rel="preload" as="script" crossorigin href="js/c-HLHI3DHR.js">
-<link rel="preload" as="script" crossorigin href="js/c-QMN7B57H.js">
-<link rel="preload" as="script" crossorigin href="js/c-OJQEJLAA.js">
+<link rel="preload" as="script" crossorigin href="js/main.js?v=39zh">
+<link rel="preload" as="script" crossorigin href="js/c-B647SKC2.js">
+<link rel="preload" as="script" crossorigin href="js/c-4MUEMWDW.js">
+<link rel="preload" as="script" crossorigin href="js/c-OH5LIBM3.js">
 <style>
   html,body{margin:0;height:100%;background:#000;overflow:hidden}
   canvas{display:block;width:100%;height:100%;touch-action:none}
@@ -24,90 +24,114 @@
   #panel small{display:block;margin-top:8px;opacity:.6}
   #panel{z-index:11}
 </style>
-<link rel="stylesheet" href="hud.css?v=39zg" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="join.css?v=39zg" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="hud.css?v=39zh" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="join.css?v=39zh" media="print" onload="this.media='all'">
 </head>
 <body>
 <!--LOADER-->
 <div id="boot" data-x="1400000">
 <style>
-#boot{position:fixed;inset:0;z-index:100;overflow:hidden;background:radial-gradient(120% 80% at 50% 28%,#08121f,#02040a 70%);color:#F4F5F7;font:900 16px/1 Oswald,"Arial Narrow",Arial,sans-serif;text-transform:uppercase;--p:0;--f:-apple-system,Inter,Arial,sans-serif;transition:opacity .7s cubic-bezier(.4,0,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}
+#boot{position:fixed;inset:0;z-index:100;overflow:hidden;background:#0b1020;color:#F4F5F7;--f:-apple-system,Inter,Arial,sans-serif;transition:opacity .7s cubic-bezier(.4,0,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}
 #boot.d{opacity:0;transform:scale(1.04);pointer-events:none}
-#boot i{position:absolute;left:0;right:0;top:-360px;bottom:0;background-size:var(--t) var(--t);opacity:var(--o);animation:bs var(--s) linear infinite}
-@keyframes bs{to{transform:translateY(var(--t))}}
-#boot .e{position:absolute;left:50%;width:220vmax;height:220vmax;margin-left:-110vmax;bottom:calc(30vh - 220vmax);border-radius:50%;background:radial-gradient(ellipse at 50% 0,#0d3166,#061630 14%,#030a18 40%,#02040a 70%);border-top:2px solid #bfe6ff;box-shadow:0 -2px 14px 1px #6cc4ff,0 -14px 70px 6px #2f7dff88,inset 0 22px 50px -10px #5fb6ff99;opacity:calc(.55 + .45*var(--p))}
-#boot .w{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(10px,2.4vh,22px);padding:0 18px 16vh;box-sizing:border-box}
-#boot svg{width:min(88vw,540px,70vh);height:auto;overflow:visible}
-#boot .g{filter:drop-shadow(0 0 7px #E10600)}
-#boot .k{animation:sw 4.5s linear infinite}
-@keyframes sw{to{stroke-dashoffset:-100}}
-#boot h1{margin:0;text-align:center;font:inherit;line-height:.98;white-space:nowrap}
-#boot h1 b{display:block;font-weight:inherit}
-#boot h1 b+b{display:table;margin:.2em auto 0;padding:.04em .3em .02em;background:#E10600;color:#fff;border:3px solid #000;box-shadow:4px 4px 0 #F4F5F7;animation:up .5s .5s both}
-#boot h1 b:first-child{text-shadow:2px 2px 0 #E10600,4px 4px 0 #000}
-#boot h1 span{display:inline-block;animation:up .6s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(.15s + var(--i)*45ms)}
-@keyframes up{from{opacity:0;transform:translateY(.45em) scaleY(1.3);filter:blur(4px)}}
-#boot p{margin:0;font:600 12px/1.2 var(--f);letter-spacing:.2em;color:#B4BAC5;text-align:center;animation:up .8s .9s both}
-#boot p::before{content:"";display:inline-block;width:18px;height:3px;margin:0 10px 3px 0;background:#E10600;vertical-align:middle}
-#boot .c{display:flex;align-items:baseline;gap:8px;padding:5px 14px 4px;background:#000;border:2px solid #F4F5F7;box-shadow:3px 3px 0 #E10600;animation:up .6s 1s both}
-#boot .c b{font-size:26px;min-width:2ch;text-align:right;font-variant-numeric:tabular-nums}
-#boot .c small{font:600 11px var(--f);letter-spacing:.18em;color:#B4BAC5}
-#boot .m,#boot button{display:none}
-#boot.x .m{display:block;font:600 13px/1.3 -apple-system,Arial,sans-serif;text-transform:none;letter-spacing:0;text-align:center;color:#ffb4ad}
-#boot.x button{display:block;font:inherit;font-size:16px;padding:10px 24px;background:#E10600;color:#fff;border:3px solid #000;box-shadow:3px 3px 0 #F4F5F7}
+#boot canvas{position:absolute;inset:0;width:100%;height:100%}
+#boot .c{position:absolute;left:0;right:0;top:var(--ty,70%);display:flex;flex-direction:column;align-items:center;gap:10px}
+#boot .c b{font:700 46px/1 Oswald,"Arial Narrow",Arial,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:.01em}
+#boot .c b i{font-style:normal;font-size:.46em;color:#E10600;margin-left:3px;vertical-align:.78em}
+#boot .c small{font:600 11px/1 var(--f);letter-spacing:.34em;text-transform:uppercase;color:#8d96aa}
+#boot .c small::before{content:"";display:inline-block;width:16px;height:2px;margin:0 10px 3px 0;background:#E10600;vertical-align:middle}
+#boot .m{display:none;position:absolute;left:0;right:0;bottom:max(18px,env(safe-area-inset-bottom));font:500 12px/1.3 var(--f);text-align:center;color:#8d96aa;padding:0 16px}
+#boot.x .m{display:block}
+#boot .m button{font:inherit;color:#F4F5F7;background:none;border:0;padding:4px 6px;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
 @media (prefers-reduced-motion:reduce){#boot,#boot *{animation:none!important;transition-duration:.2s!important}#boot.d{transform:none}}
 </style>
-<i style="--t:160px;--o:.55;--s:110s;background-image:radial-gradient(1px 1px at 12px 20px,#fff,#0000),radial-gradient(1px 1px at 84px 112px,#cfe4ff,#0000),radial-gradient(1px 1px at 141px 61px,#fff,#0000)"></i>
-<i style="--t:240px;--o:.8;--s:60s;background-image:radial-gradient(1.3px 1.3px at 30px 50px,#fff,#0000),radial-gradient(1.3px 1.3px at 170px 30px,#ffe9d0,#0000),radial-gradient(1.3px 1.3px at 110px 190px,#fff,#0000)"></i>
-<i style="--t:360px;--o:1;--s:32s;background-image:radial-gradient(2px 2px at 60px 90px,#fff,#0000),radial-gradient(1.8px 1.8px at 250px 40px,#ff8c84,#0000),radial-gradient(2px 2px at 190px 260px,#fff,#0000)"></i>
-<div class="e"></div>
-<div class="w">
-<svg viewBox="0 0 320 130" aria-hidden="true">
-<defs><radialGradient id="bg"><stop offset="0" stop-color="#E10600" stop-opacity=".5"/><stop offset="1" stop-color="#E10600" stop-opacity="0"/></radialGradient>
-<mask id="bm"><path d="M160 22.5A125 42.5 0 1 1 160 107.5A125 42.5 0 1 1 160 22.5" fill="none" stroke="#fff" stroke-width="9" stroke-dasharray="1.45 .55" pathLength="100"/></mask></defs>
-<ellipse cx="160" cy="65" rx="150" ry="52" fill="url(#bg)" style="opacity:calc(.25 + .75*var(--p))"/>
-<ellipse cx="160" cy="65" rx="148" ry="50" fill="none" stroke="#fff" stroke-opacity=".16" stroke-width="1.5"/>
-<ellipse cx="160" cy="65" rx="125" ry="42.5" fill="none" stroke="#fff" stroke-opacity=".1" stroke-width="9"/>
-<g class="g"><path id="br" d="M160 15A148 50 0 1 1 160 115A148 50 0 1 1 160 15" fill="none" stroke="#fff" stroke-width="2.5" pathLength="100" stroke-dasharray="100 100" stroke-dashoffset="100"/>
-<path id="bs" d="M160 22.5A125 42.5 0 1 1 160 107.5A125 42.5 0 1 1 160 22.5" fill="none" stroke="#E10600" stroke-width="9" pathLength="100" stroke-dasharray="0 100" mask="url(#bm)"/>
-<circle id="bh" r="4" fill="#fff" cx="160" cy="15"/></g>
-<path class="k" d="M160 15A148 50 0 1 1 160 115A148 50 0 1 1 160 15" fill="none" stroke="#9fd0ff" stroke-width="2" stroke-opacity=".7" pathLength="100" stroke-dasharray="4 96"/>
-<g fill="none" stroke="#fff" stroke-width="1" style="stroke-opacity:calc(.15 + .6*var(--p))"><ellipse cx="160" cy="65" rx="78" ry="25"/><path d="M160 40v50"/><ellipse cx="160" cy="65" rx="13" ry="5"/></g>
-</svg>
-<h1 id="bt"></h1><p id="bp"></p>
-<div class="c"><b id="bn">0</b><small>% <span id="bl"></span></small></div>
-<div class="m" id="bm2"></div><button onclick="location.reload()">&#8635;</button>
-</div>
+<canvas id="bc" aria-hidden="true"></canvas>
+<div class="c" role="progressbar" aria-valuemin="0" aria-valuemax="100" id="bpb"><b id="bn">0<i>%</i></b><small id="bl"></small></div>
+<div class="m"><span id="bm2"></span> <button onclick="location.reload()" id="brt"></button></div>
 <script>
-(()=>{const b=document.getElementById('boot'),$=i=>document.getElementById(i),
-T={en:['INTERGALACTIC STADIUM','name chosen by fans — soon','loading','Taking long… wait or retry.'],
-ru:['МЕЖГАЛАКТИЧЕСКИЙ СТАДИОН','название выберут фанаты','загрузка','Долго… подождите или повторите.'],
-es:['ESTADIO INTERGALÁCTICO','el nombre lo elegirán los aficionados — pronto','cargando','Tarda mucho… espera o reintenta.'],
-pt:['ESTÁDIO INTERGALÁCTICO','o nome será escolhido pelos torcedores — em breve','carregando','Está demorando… espere ou tente de novo.'],
-zh:['星际体育场','名字将由球迷选择 — 敬请期待','加载中','加载较慢…请稍候或重试。']};
+(()=>{if(/[?&]reel=1(&|$)/.test(location.search)){document.getElementById('boot').remove();return}   // footage never shows the loader: reel.js owns rAF + clock, so its frame loop would not run
+const b=document.getElementById('boot'),$=i=>document.getElementById(i),
+T={en:['loading','Taking long…','Retry'],ru:['загрузка','Долго…','Повторить'],es:['cargando','Tarda mucho…','Reintentar'],pt:['carregando','Está demorando…','Tentar de novo'],zh:['加载中','加载较慢…','重试']};
 let L='en';try{const q=new URLSearchParams(location.search).get('lang'),s=localStorage.getItem('lang'),nl=(navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language]).map(x=>String(x||'').slice(0,2).toLowerCase()).find(x=>T[x]);L=T[q]?q:T[s]?s:nl||'en'}catch(e){}   // same order as i18n.js: ?lang= -> stored -> browser languages -> en
-const d=T[L],w=L=='zh'?[d[0]]:d[0].split(' ');let n=0;
-$('bt').innerHTML=w.map(s=>'<b>'+[...s].map(c=>'<span style="--i:'+n+++'">'+c+'</span>').join('')+'</b>').join('');
-$('bp').textContent=d[1];$('bl').textContent=d[2];
-const fit=()=>{const t=$('bt'),k=Math.min(innerWidth-36,540)/Math.max(...[...t.children].map(e=>e.offsetWidth+16),1);t.style.fontSize=Math.max(22,Math.min(L=='zh'?64:60,parseFloat(getComputedStyle(t).fontSize)*k))+'px'};
-$('bt').style.fontSize='40px';fit();addEventListener('resize',fit);
-const rm=matchMedia('(prefers-reduced-motion:reduce)').matches,X=+b.dataset.x,br=$('br'),bs=$('bs'),bh=$('bh'),len=br.getTotalLength();
-let tot=0,tg=.03,cu=0,done=0,ff=0;
-try{new PerformanceObserver(l=>{for(const e of l.getEntries())tot+=e.encodedBodySize||e.transferSize||2e4;tg=Math.max(tg,Math.min(.96,.03+.93*tot/X))}).observe({type:'resource',buffered:true})}catch(e){}
-const t0=performance.now(),set=p=>{b.style.setProperty('--p',p);$('bn').textContent=Math.round(p*100);br.style.strokeDashoffset=100-p*100;bs.style.strokeDasharray=p*100+' 100';const q=br.getPointAtLength(p*len);bh.setAttribute('cx',q.x);bh.setAttribute('cy',q.y)};
-const tick=()=>{if(!b.isConnected)return;const r=window.__stadium&&window.__stadium.renderer;
+const d=T[L];$('bl').textContent=d[0];$('bm2').textContent=d[1];$('brt').textContent=d[2];
+const rm=matchMedia('(prefers-reduced-motion:reduce)').matches,X=+b.dataset.x,TAU=Math.PI*2;
+// ---- progress (same driver in A/B/C): tg = real bytes seen / data-x (as index.html), done = scene ready ----
+let tot=0,tg=.03,cu=0,done=0,ff=0,full=0,shown=-1;
+const feed=n=>{tot+=n;tg=Math.max(tg,Math.min(.96,.03+.93*tot/X))};
+try{new PerformanceObserver(l=>{for(const e of l.getEntries())feed(e.encodedBodySize||e.transferSize||2e4)}).observe({type:'resource',buffered:true})}catch(e){}
+// shown %: 0 -> 60 in FAST ms, then chases real (mapped into 60..98), and while real is stuck it still creeps, slower the further ahead it is; 99 max until done
+const FAST=1200,step=(t,dt)=>{if(done){cu+=(1-cu)*(1-Math.exp(-dt/110));if(cu>.996)cu=1;return}
+  if(t<FAST){cu=Math.max(cu,.6*(1-Math.pow(1-t/FAST,3)));return}
+  const R=.6+.38*Math.min(1,tg/.96),lead=cu-R;if(lead<0)cu-=lead*(1-Math.exp(-dt/350));
+  cu=Math.min(.99,cu+(.012*Math.exp(-Math.max(0,lead)/.08)+.0015)*dt/1000)};   // ponytail: creep floor .15 %/s = 99 % after ~4 min of zero real progress; the 45 s retry line shows long before
+
+// ---- stadium model (metres-ish): pitch 105 x 68, bowl rows are true offset curves of the pitch rectangle ----
+const PL=52.5,PW=34,SP=6.2,GAP=3,M0=9,RAD=SP*.36,tin=t=>M0+t*(3*SP+GAP),DR=tin(3)-GAP+3.4,RW=4.6;
+const pt=(o,s)=>{for(let k=0;k<8;k++){const q=k&3,nx=[1,0,-1,0][q],ny=[0,1,0,-1][q],h=q&1?PW:PL,l=q&1?PL:PW;if(s<2*l)return[nx*(h+o)+ny*(l-s),ny*(h+o)+nx*(s-l)];s-=2*l;const c=Math.PI*o/2;if(s<c){const f=q*Math.PI/2+s/o;return[nx*h-ny*l+o*Math.cos(f),ny*h+nx*l+o*Math.sin(f)]}s-=c}return[PL+o,0]};
+let sd=7;const rnd=()=>{sd=(sd+0x6D2B79F5)|0;let t=Math.imul(sd^(sd>>>15),1|sd);t=(t+Math.imul(t^(t>>>7),61|t))^t;return((t^(t>>>14))>>>0)/4294967296};   // mulberry32: same crowd every load
+const PAL=['#FFD23F','#FF8A1F','#4FC3F7','#9B5DE5','#FF5FA2','#F4F5F7','#3DDC84','#FF3B30'],seats=[];
+for(let t=0;t<3;t++)for(let j=0;j<3;j++){const o=tin(t)+SP*(j+.5),P=4*(PL+PW)+TAU*o,n=Math.round(P/SP);
+  for(let i=0;i<n;i++){const[x,y]=pt(o,((i+.5+(j&1)*.5)*P/n)%P),blk=Math.floor((Math.atan2(y,x)+Math.PI)/TAU*14)+t*5;
+    seats.push({x,y,c:rnd()<.42?(blk*3)%8:Math.floor(rnd()*8),k:rnd()*.72+.28*(.5+.5*Math.sin(x*.045+2*Math.sin(y*.05))),t0:0})}}
+const N=seats.length,order=seats.slice().sort((p,q)=>p.k-q.k),POP=340;let nf=0;
+
+// ---- layers: S = static (bg, bowl, pitch, empty seats, ring), G = ring glow (alpha follows progress) ----
+const cv=$('bc'),cx=cv.getContext('2d'),S=document.createElement('canvas'),G=document.createElement('canvas');let K=1,M=[1,0,0,1,0,0];
+const rr=(c,o)=>c.roundRect(-PL-o,-PW-o,2*(PL+o),2*(PW+o),Math.max(0,o));
+const layout=()=>{const W=innerWidth,H=innerHeight,dp=Math.min(3,devicePixelRatio||1),por=H>W,ex=PL+DR+RW,ey=PW+DR+RW,
+  sc=Math.min(3,por?Math.min((W-32)/(2*ey),H*.62/(2*ex)):Math.min(W*.8/(2*ex),(H-150)/(2*ey))),hh=(por?ex:ey)*sc,top=Math.max(16,(H-2*hh-96)/2-H*.02);
+  for(const c of[cv,S,G]){c.width=Math.round(W*dp);c.height=Math.round(H*dp)}
+  K=sc*dp;const cxp=W/2*dp,cyp=(top+hh)*dp;M=por?[0,-K,K,0,cxp,cyp]:[K,0,0,K,cxp,cyp];b.style.setProperty('--ty',top+2*hh+22+'px');
+  const s=S.getContext('2d'),g=G.getContext('2d');
+  let gr=s.createRadialGradient(cxp,cyp,0,cxp,cyp,Math.max(W,H)*dp*.7);gr.addColorStop(0,'#131c36');gr.addColorStop(.5,'#0b1020');gr.addColorStop(1,'#070a15');s.fillStyle=gr;s.fillRect(0,0,S.width,S.height);
+  s.setTransform(...M);
+  s.fillStyle='#090d1a';s.beginPath();rr(s,DR);s.fill();                                       // concourse under the ring
+  s.fillStyle='#05070e';s.beginPath();rr(s,tin(3)-GAP+.8);s.fill();                            // tier dividers = the dark showing between bands
+  for(let t=0;t<3;t++){s.beginPath();rr(s,tin(t)+3*SP);rr(s,tin(t));gr=s.createLinearGradient(0,-PW-tin(t+1),0,PW+tin(t+1));gr.addColorStop(0,'#18203a');gr.addColorStop(1,'#121931');s.fillStyle=gr;s.fill('evenodd')}
+  s.fillStyle='#0d1428';s.beginPath();rr(s,M0-.6);s.fill();                                    // apron
+  pitch(s,TAU);
+  s.fillStyle='#242b3e';s.beginPath();for(const p of seats){s.moveTo(p.x+RAD,p.y);s.arc(p.x,p.y,RAD,0,TAU)}s.fill();   // empty seats
+  s.lineWidth=RW;s.strokeStyle='#E10600';s.shadowColor='#E10600';s.shadowBlur=10*dp;s.beginPath();rr(s,DR);s.stroke();s.shadowBlur=0;   // the red ring: crisp core + inner highlight
+  s.lineWidth=.8;s.strokeStyle='rgba(255,130,115,.75)';s.beginPath();rr(s,DR-RW*.18);s.stroke();
+  g.setTransform(...M);g.lineWidth=RW*1.6;g.strokeStyle='rgba(225,6,0,.9)';g.shadowColor='#ff1a0d';g.shadowBlur=22*dp;g.beginPath();rr(g,DR);g.stroke();g.shadowBlur=40*dp;g.lineWidth=RW;g.stroke();
+};
+// pitch: 18 mower passes (seams on the goal lines + halfway, as grass.js), colours = the app's turf (grass.js base 0.017/0.128/0.020 linear, +-25 % stripe) in sRGB, floodlight sheen, white paint
+const pitch=s=>{const RX=PL+5,RY=PW+4.5,pw=105/18;let gr;s.save();s.beginPath();s.rect(-RX,-RY,2*RX,2*RY);s.clip();
+  for(let i=-1;i<19;i++){s.fillStyle=i&1?'#1f5d24':'#2a7128';s.fillRect(-PL+i*pw,-RY,pw+.05,2*RY)}
+  for(const[qx,qy]of[[-1,-1],[1,-1],[-1,1],[1,1]]){gr=s.createRadialGradient(qx*RX,qy*RY,0,qx*RX,qy*RY,PL*1.3);gr.addColorStop(0,'rgba(255,250,225,.16)');gr.addColorStop(1,'rgba(255,250,225,0)');s.fillStyle=gr;s.fillRect(-RX,-RY,2*RX,2*RY)}
+  gr=s.createRadialGradient(0,0,PW*.6,0,0,PL*1.25);gr.addColorStop(0,'rgba(0,0,0,0)');gr.addColorStop(1,'rgba(0,10,0,.32)');s.fillStyle=gr;s.fillRect(-RX,-RY,2*RX,2*RY);s.restore();
+  const am=(x,y,r,a0,da)=>{s.moveTo(x+r*Math.cos(a0),y+r*Math.sin(a0));s.arc(x,y,r,a0,a0+da)};s.strokeStyle='rgba(255,255,255,.92)';s.fillStyle='#fff';s.lineWidth=.75;s.lineJoin='round';s.beginPath();
+  s.rect(-PL,-PW,2*PL,2*PW);s.moveTo(0,-PW);s.lineTo(0,PW);s.moveTo(9.15,0);s.arc(0,0,9.15,0,TAU);
+  for(const q of[-1,1]){s.rect(q>0?PL-16.5:-PL,-20.16,16.5,40.32);s.rect(q>0?PL-5.5:-PL,-9.16,5.5,18.32);s.rect(q>0?PL:-PL-2,-3.66,2,7.32);const a=Math.acos(5.5/9.15);am(q*(PL-11),0,9.15,q>0?Math.PI-a:-a,2*a)}
+  for(const[qx,qy]of[[-1,-1],[1,-1],[-1,1],[1,1]])am(qx*PL,qy*PW,1,Math.atan2(-qy,-qx)-Math.PI/4,Math.PI/2);
+  s.stroke();s.beginPath();for(const x of[0,-PL+11,PL-11]){s.moveTo(x+.5,0);s.arc(x,0,.5,0,TAU)}s.fill()};
+layout();addEventListener('resize',layout);
+
+const ease=u=>1-Math.pow(1-u,3),draw=(now,p)=>{
+  const n=p>=1?N:Math.min(N-1,Math.round(p*N));for(;nf<n;nf++)order[nf].t0=rm?now-POP:now;   // a few seats per frame: the smoothed progress sets the pace
+  cx.setTransform(1,0,0,1,0,0);cx.drawImage(S,0,0);cx.globalAlpha=.3+.4*p;cx.drawImage(G,0,0);cx.globalAlpha=1;cx.setTransform(...M);
+  for(let c=0;c<8;c++){cx.fillStyle=PAL[c];cx.beginPath();for(let i=0;i<nf;i++){const s=order[i];if(s.c==c&&now-s.t0>=POP){cx.moveTo(s.x+RAD,s.y);cx.arc(s.x,s.y,RAD,0,TAU)}}cx.fill()}
+  cx.fillStyle='rgba(255,255,255,.38)';cx.beginPath();for(let i=0;i<nf;i++){const s=order[i];if(now-s.t0>=POP){cx.moveTo(s.x+RAD*.17,s.y+RAD*.3);cx.arc(s.x-RAD*.25,s.y+RAD*.3,RAD*.42,0,TAU)}}cx.fill();   // tiny sheen: a dot reads as a body, not a pixel
+  for(let i=nf-1;i>=0&&now-order[i].t0<POP;i--){const s=order[i],u=Math.max(0,(now-s.t0)/POP);const r=RAD*(u<.55?1.35*ease(u/.55):1.35-.35*ease((u-.55)/.45));
+    cx.fillStyle=PAL[s.c];cx.beginPath();cx.arc(s.x,s.y,Math.max(.01,r),0,TAU);cx.fill();cx.strokeStyle=PAL[s.c];cx.globalAlpha=.6*(1-u);cx.lineWidth=.45;cx.beginPath();cx.arc(s.x,s.y,RAD*(1+1.6*u),0,TAU);cx.stroke();cx.globalAlpha=1}
+  const v=p>=1?100:Math.min(99,Math.floor(p*100));if(v!=shown){shown=v;$('bn').firstChild.nodeValue=v;$('bpb').setAttribute('aria-valuenow',v)}};
+
+const t0=performance.now(),HOLD=rm?150:520;let last=t0;
+const tick=now=>{if(!b.isConnected)return;const dt=Math.min(100,now-last);last=now;const r=window.__stadium&&window.__stadium.renderer;
 if(!done&&r&&r.info.render.frame>1){ff=ff||performance.now();const sc=window.__stadium.scene,E=sc&&sc.getObjectByName('earth');const cf=window.__stadium.crowdF;if(performance.now()-ff>15e3||(cf!=null&&r.info.render.frame>cf+1&&(!E||E.visible))){done=1;tg=1;window.__firstFrame=ff}}
-cu=rm?tg:cu+(tg-cu)*(done?.25:.07);set(cu);
-if(done&&cu>.995){set(1);setTimeout(()=>{b.classList.add('d');setTimeout(()=>b.remove(),950)},180);return}
-if(!done&&performance.now()-t0>45e3){$('bm2').textContent=d[3]||T.en[3];b.classList.add('x')}
+step(now-t0,dt);draw(now,cu);
+if(cu==1&&!full)full=now;
+if(full&&now-full>HOLD){b.classList.add('d');setTimeout(()=>b.remove(),950);return}
+if(!done&&now-t0>45e3)b.classList.add('x');
 requestAnimationFrame(tick)};
-window.__boot={err:m=>{$('bm2').textContent=m;b.classList.add('x')}};set(0);tick()})();
+window.__boot={err:m=>{$('bm2').textContent=m;b.classList.add('x')}};requestAnimationFrame(tick)})();
 </script>
 </div>
 <!--/LOADER-->
 <div id="panel"></div>
 <div id="dbg"></div>
 <script>
+// Graphics switch (HUD rail «Graphics»): one on/off per viewer, applied on reload. Off (default) = the app as before.
+window.__gfx = false; if (!/[?&]reel=1(&|$)/.test(location.search)) try { window.__gfx = localStorage.getItem('stadium.gfx') === '1'; } catch (e) {}
 // Boot: pick a working CDN for three.js (jsdelivr, else unpkg), then install the import map and start the app modules in order.
 (async () => {
   const CDN = ['https://cdn.jsdelivr.net/npm/three@0.160.0/', 'https://unpkg.com/three@0.160.0/'];
@@ -121,7 +145,7 @@ window.__boot={err:m=>{$('bm2').textContent=m;b.classList.add('x')}};set(0);tick
   m.textContent = JSON.stringify({ imports: { three: base + 'build/three.module.js', 'three/addons/': base + 'examples/jsm/' } });
   document.head.append(m);
   for (const s of ['main', 'join', 'sound', 'tiermap', 'editor']) {
-    const e = document.createElement('script'); e.type = 'module'; e.async = false; e.src = 'js/' + s + '.js?v=39zg'; document.body.append(e);
+    const e = document.createElement('script'); e.type = 'module'; e.async = false; e.src = 'js/' + s + '.js?v=39zh'; document.body.append(e);
   }
 })();
 </script>

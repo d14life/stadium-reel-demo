@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stadium look</title>
+<!-- Stadium look panel (admin «Stadium look» tab): a live preview of index.html + one-click URL switches (look.js). Builds URLs only; the live app is untouched. -->
+<style>
+  :root{--bg:#0d0f14;--card:#161a22;--line:#2a303c;--ink:#e8ebf1;--mute:#8b93a3;--acc:#ff7a1a}
+  @media (prefers-color-scheme: light){:root{--bg:#f4f5f8;--card:#fff;--line:#d8dce4;--ink:#141821;--mute:#5d6575}}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.35 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+  .wrap{display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:12px;padding:12px;height:100vh}
+  .pv{display:flex;flex-direction:column;gap:8px;min-height:0}
+  #frame{flex:1;width:100%;border:1px solid var(--line);border-radius:10px;background:#000;min-height:300px}
+  .bar{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+  #url{flex:1;min-width:0;padding:7px 9px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);font:12px ui-monospace,Menlo,monospace}
+  button,a.btn{font:inherit;padding:6px 10px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;text-decoration:none}
+  button[aria-pressed="true"]{background:var(--acc);border-color:var(--acc);color:#fff}
+  #presets button{border-color:var(--acc)}
+  .side{overflow:auto;min-height:0;padding-right:2px}
+  details{background:var(--card);border:1px solid var(--line);border-radius:10px;margin-bottom:8px;padding:4px 10px 8px}
+  summary{cursor:pointer;font-weight:600;padding:6px 0}
+  .row{padding:6px 0;border-top:1px solid var(--line)}
+  .lab{color:var(--mute);font-size:12px;margin-bottom:4px}
+  .seg{display:flex;flex-wrap:wrap;gap:4px}
+  .seg button{padding:5px 8px;font-size:13px}
+  .tag{font-size:10px;padding:1px 5px;border-radius:5px;border:1px solid var(--line);color:var(--mute)}
+  .note{color:var(--acc);font-size:12px;margin:6px 0 0}
+  @media (max-width:800px){.wrap{grid-template-columns:1fr;height:auto;padding:12px 16px}#frame{flex:none;height:62vh}.side{overflow:visible}}
+</style></head>
+<body>
+<div class="wrap">
+  <div class="pv">
+    <div class="bar" id="presets"></div>
+    <iframe id="frame" title="Stadium preview" allow="autoplay; fullscreen"></iframe>
+    <div class="bar"><input id="url" readonly aria-label="Current URL"><button type="button" id="copy">Copy</button><a class="btn" id="full" target="_blank" rel="noopener">Open full screen</a><button type="button" id="reset">Clear all</button></div>
+  </div>
+  <div class="side" id="groups"></div>
+</div>
+<script type="module" src="look.js"></script>
+</body></html>
