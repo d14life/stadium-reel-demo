@@ -1,0 +1,3 @@
+Footballer body, eyes, brows, hair: Quaternius "Universal Base Characters" (Superhero_Male + hairstyles), CC0 1.0.
+https://quaternius.itch.io/universal-base-characters  /  https://quaternius.com/packs/universalbasecharacters.html
+Baked by build.py (leaner shape, kit slots); no credit required, given anyway.

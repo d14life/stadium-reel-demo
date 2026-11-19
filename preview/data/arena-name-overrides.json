@@ -1,0 +1,4 @@
+{
+  "note": "docs/match/SPEC.md A9: explicit fan-squad name -> data/match-squads.json player id, per club (ru key), for names the rules cannot match. Add a line only when it is certainly the same man; never a guess. Check: deno run -A tools/arena_names.ts",
+  "clubs": {}
+}

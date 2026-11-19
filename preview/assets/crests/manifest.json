@@ -1,0 +1,1781 @@
+{
+ "crests": [
+  {
+   "club": "Спартак",
+   "slug": "spartak",
+   "file": "assets/crests/spartak.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/9/93/FC_Spartak_Moscow_crest.svg",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:FC_Spartak_Moscow_crest.svg",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file)",
+   "bytes": 23548
+  },
+  {
+   "club": "Зенит",
+   "slug": "zenit",
+   "file": "assets/crests/zenit.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/e/eb/FC_Zenit_Saint_Petersburg_crest.svg",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:FC_Zenit_Saint_Petersburg_crest.svg",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file)",
+   "bytes": 17683
+  },
+  {
+   "club": "ЦСКА",
+   "slug": "cska",
+   "file": "assets/crests/cska.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/2/26/PFK_CSKA_Logo.svg",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:PFK_CSKA_Logo.svg",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file)",
+   "bytes": 57304
+  },
+  {
+   "club": "Манчестер Юнайтед",
+   "slug": "man-united",
+   "file": "assets/crests/man-united.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:Manchester_United_FC_crest.svg",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file)",
+   "bytes": 60351
+  },
+  {
+   "club": "Ливерпуль",
+   "slug": "liverpool",
+   "file": "assets/crests/liverpool.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/0/0c/Liverpool_FC.svg",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:Liverpool_FC.svg",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file)",
+   "bytes": 69854
+  },
+  {
+   "club": "Арсенал",
+   "slug": "arsenal",
+   "file": "assets/crests/arsenal.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:Arsenal_FC.svg",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file)",
+   "bytes": 45617
+  },
+  {
+   "club": "Челси",
+   "slug": "chelsea",
+   "file": "assets/crests/chelsea.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/c/cc/Chelsea_FC.svg",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:Chelsea_FC.svg",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file)",
+   "bytes": 53589
+  },
+  {
+   "club": "Манчестер Сити",
+   "slug": "man-city",
+   "file": "assets/crests/man-city.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:Manchester_City_FC_badge.svg",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file)",
+   "bytes": 68007
+  },
+  {
+   "club": "Тоттенхэм",
+   "slug": "tottenham",
+   "file": "assets/crests/tottenham.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/b/b4/Tottenham_Hotspur.svg",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:Tottenham_Hotspur.svg",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file)",
+   "bytes": 18162
+  },
+  {
+   "club": "Ньюкасл",
+   "slug": "newcastle",
+   "file": "assets/crests/newcastle.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/8/87/Newcastle_United_FC_2026_crest.svg",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:Newcastle_United_FC_2026_crest.svg",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file)",
+   "bytes": 57468
+  },
+  {
+   "club": "Астон Вилла",
+   "slug": "aston-villa",
+   "file": "assets/crests/aston-villa.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/9/9a/Aston_Villa_FC_new_crest.svg",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:Aston_Villa_FC_new_crest.svg",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file)",
+   "bytes": 38914
+  },
+  {
+   "club": "Атлетико",
+   "slug": "atletico",
+   "file": "assets/crests/atletico.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/f/f9/Atletico_Madrid_Logo_2024.svg",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:Atletico_Madrid_Logo_2024.svg",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file)",
+   "bytes": 20696
+  },
+  {
+   "club": "Бока Хуниорс",
+   "slug": "boca",
+   "file": "assets/crests/boca.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Boca_Juniors_logo18.svg",
+   "wiki_file_page": "https://commons.wikimedia.org/wiki/File:Boca_Juniors_logo18.svg",
+   "license_note": "Public domain",
+   "bytes": 45100
+  },
+  {
+   "club": "Ривер Плейт",
+   "slug": "river-plate",
+   "file": "assets/crests/river-plate.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/commons/4/43/Club_Atl%C3%A9tico_River_Plate_logo.svg",
+   "wiki_file_page": "https://commons.wikimedia.org/wiki/File:Club_Atl%C3%A9tico_River_Plate_logo.svg",
+   "license_note": "Public domain",
+   "bytes": 28243
+  },
+  {
+   "club": "Севилья",
+   "slug": "sevilla",
+   "file": "assets/crests/sevilla.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/3/3b/Sevilla_FC_logo.svg",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:Sevilla_FC_logo.svg",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file)",
+   "bytes": 40801
+  },
+  {
+   "club": "Америка",
+   "slug": "america",
+   "file": "assets/crests/america.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/c/c1/Club_Am%C3%A9rica_crest.svg",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:Club_Am%C3%A9rica_crest.svg",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file)",
+   "bytes": 43885
+  },
+  {
+   "club": "Валенсия",
+   "slug": "valencia",
+   "file": "assets/crests/valencia.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/c/ce/Valenciacf.svg",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:Valenciacf.svg",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file)",
+   "bytes": 26462
+  },
+  {
+   "club": "Бетис",
+   "slug": "betis",
+   "file": "assets/crests/betis.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/2/2f/Real_Betis_2022_logo.svg",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:Real_Betis_2022_logo.svg",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file)",
+   "bytes": 22239
+  },
+  {
+   "club": "Пеньяроль",
+   "slug": "penarol",
+   "file": "assets/crests/penarol.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Escudo_del_Club_Atl%C3%A9tico_Pe%C3%B1arol.svg",
+   "wiki_file_page": "https://commons.wikimedia.org/wiki/File:Escudo_del_Club_Atl%C3%A9tico_Pe%C3%B1arol.svg",
+   "license_note": "Public domain",
+   "bytes": 11626
+  },
+  {
+   "club": "Фламенго",
+   "slug": "flamengo",
+   "file": "assets/crests/flamengo.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Clube_de_Regatas_do_Flamengo_logo.svg",
+   "wiki_file_page": "https://commons.wikimedia.org/wiki/File:Clube_de_Regatas_do_Flamengo_logo.svg",
+   "license_note": "Public domain",
+   "bytes": 14505
+  },
+  {
+   "club": "Коринтианс",
+   "slug": "corinthians",
+   "file": "assets/crests/corinthians.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/5/5a/Sport_Club_Corinthians_Paulista_crest.svg",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:Sport_Club_Corinthians_Paulista_crest.svg",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file)",
+   "bytes": 58585
+  },
+  {
+   "club": "Бенфика",
+   "slug": "benfica",
+   "file": "assets/crests/benfica.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/a/a2/SL_Benfica_logo.svg",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:SL_Benfica_logo.svg",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file)",
+   "bytes": 66492
+  },
+  {
+   "club": "Палмейрас",
+   "slug": "palmeiras",
+   "file": "assets/crests/palmeiras.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Sociedade_Esportiva_Palmeiras_logo_%281_red_star%29.svg",
+   "wiki_file_page": "https://commons.wikimedia.org/wiki/File:Sociedade_Esportiva_Palmeiras_logo_(1_red_star).svg",
+   "license_note": "Public domain",
+   "bytes": 58502
+  },
+  {
+   "club": "Порту",
+   "slug": "porto",
+   "file": "assets/crests/porto.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/f/f1/FC_Porto.svg",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:FC_Porto.svg",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file)",
+   "bytes": 57080
+  },
+  {
+   "club": "Спортинг",
+   "slug": "sporting",
+   "file": "assets/crests/sporting.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/9/97/Sporting_Clube_de_Portugal_logo_%282026%29.svg",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:Sporting_Clube_de_Portugal_logo_(2026).svg",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file)",
+   "bytes": 39054
+  },
+  {
+   "club": "Сан-Паулу",
+   "slug": "sao-paulo",
+   "file": "assets/crests/sao-paulo.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/commons/f/f4/S%C3%A3o_Paulo_Futebol_Clube_logo_%282022%29.svg",
+   "wiki_file_page": "https://commons.wikimedia.org/wiki/File:S%C3%A3o_Paulo_Futebol_Clube_logo_(2022).svg",
+   "license_note": "Public domain",
+   "bytes": 14617
+  },
+  {
+   "club": "Сантос",
+   "slug": "santos",
+   "file": "assets/crests/santos.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Santos_Futebol_Clube_logo_%28with_two_stars_and_a_golden_crown%29.svg",
+   "wiki_file_page": "https://commons.wikimedia.org/wiki/File:Santos_Futebol_Clube_logo_(with_two_stars_and_a_golden_crown).svg",
+   "license_note": "Public domain",
+   "bytes": 22936
+  },
+  {
+   "club": "Шанхай Порт",
+   "slug": "shanghai-port",
+   "file": "assets/crests/shanghai-port.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/7/7a/Shanghai_Port_F.C.svg",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:Shanghai_Port_F.C.svg",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file)",
+   "bytes": 50213
+  },
+  {
+   "club": "Пекин Гоань",
+   "slug": "beijing-guoan",
+   "file": "assets/crests/beijing-guoan.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/a/a8/Beijing_Guoan_F.C.svg",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:Beijing_Guoan_F.C.svg",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file)",
+   "bytes": 54753
+  },
+  {
+   "club": "Rangers",
+   "slug": "rangers",
+   "file": "assets/crests/rangers.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/4/43/Rangers_FC.svg",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:Rangers_FC.svg",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file)",
+   "bytes": 21554
+  },
+  {
+   "club": "Реал",
+   "slug": "real-madrid",
+   "file": "assets/crests/real-madrid.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:Real_Madrid_CF.svg",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file)",
+   "bytes": 55534
+  },
+  {
+   "club": "Барселона",
+   "slug": "barcelona",
+   "file": "assets/crests/barcelona.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:FC_Barcelona_(crest).svg",
+   "license_note": "PD",
+   "bytes": 30481
+  },
+  {
+   "club": "Бавария",
+   "slug": "bayern",
+   "file": "assets/crests/bayern.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/FC_Bayern_M%C3%BCnchen_logo_%282024%29.svg",
+   "wiki_file_page": "https://commons.wikimedia.org/wiki/File:FC_Bayern_M%C3%BCnchen_logo_(2024).svg",
+   "license_note": "Public domain",
+   "bytes": 51954
+  },
+  {
+   "club": "Боруссия",
+   "slug": "borussia",
+   "file": "assets/crests/borussia.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/commons/6/67/Borussia_Dortmund_logo.svg",
+   "wiki_file_page": "https://commons.wikimedia.org/wiki/File:Borussia_Dortmund_logo.svg",
+   "license_note": "Public domain",
+   "bytes": 28528
+  },
+  {
+   "club": "Галатасарай",
+   "slug": "galatasaray",
+   "file": "assets/crests/galatasaray.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/commons/0/07/Galatasaray_S.K._Logo_2026_5-stars.svg",
+   "wiki_file_page": "https://commons.wikimedia.org/wiki/File:Galatasaray_S.K._Logo_2026_5-stars.svg",
+   "license_note": "CC0",
+   "bytes": 22121
+  },
+  {
+   "club": "Фиорентина",
+   "slug": "fiorentina",
+   "file": "assets/crests/fiorentina.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/ACF_Fiorentina_-_logo_%28Italy%2C_2022%29.svg",
+   "wiki_file_page": "https://commons.wikimedia.org/wiki/File:ACF_Fiorentina_-_logo_(Italy,_2022).svg",
+   "license_note": "Public domain",
+   "bytes": 15205
+  },
+  {
+   "club": "Ювентус",
+   "slug": "juventus",
+   "file": "assets/crests/juventus.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Juventus_FC_-_logo_black_%28Italy%2C_2020%29.svg",
+   "wiki_file_page": "https://commons.wikimedia.org/wiki/File:Juventus_FC_-_logo_black_(Italy,_2020).svg",
+   "license_note": "Public domain",
+   "bytes": 3592
+  },
+  {
+   "club": "Милан",
+   "slug": "milan",
+   "file": "assets/crests/milan.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Logo_of_AC_Milan.svg",
+   "wiki_file_page": "https://commons.wikimedia.org/wiki/File:Logo_of_AC_Milan.svg",
+   "license_note": "Public domain",
+   "bytes": 35394
+  },
+  {
+   "club": "ПСЖ",
+   "slug": "psg",
+   "file": "assets/crests/psg.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/a/a7/Paris_Saint-Germain_F.C..svg",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:Paris_Saint-Germain_F.C..svg",
+   "license_note": "PD",
+   "bytes": 49687
+  },
+  {
+   "club": "Интер",
+   "slug": "inter",
+   "file": "assets/crests/inter.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/commons/0/05/FC_Internazionale_Milano_2021.svg",
+   "wiki_file_page": "https://commons.wikimedia.org/wiki/File:FC_Internazionale_Milano_2021.svg",
+   "license_note": "Public domain",
+   "bytes": 26511
+  },
+  {
+   "club": "West Ham United",
+   "slug": "west-ham",
+   "file": "assets/crests/west-ham.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 31242,
+   "colors": [
+    "#7C2C3C",
+    "#B6CFA5"
+   ]
+  },
+  {
+   "club": "Everton",
+   "slug": "everton",
+   "file": "assets/crests/everton.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 89986,
+   "colors": [
+    "#00009F",
+    "#B8B9E0"
+   ]
+  },
+  {
+   "club": "Leicester City",
+   "slug": "leicester",
+   "file": "assets/crests/leicester.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 73634,
+   "colors": [
+    "#FFFFFF",
+    "#105AA1"
+   ]
+  },
+  {
+   "club": "Brighton",
+   "slug": "brighton",
+   "file": "assets/crests/brighton.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 42148,
+   "colors": [
+    "#004798",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "club": "Wolves",
+   "slug": "wolves",
+   "file": "assets/crests/wolves.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 18506,
+   "colors": [
+    "#241F21",
+    "#FCC335"
+   ]
+  },
+  {
+   "club": "Crystal Palace",
+   "slug": "crystal-palace",
+   "file": "assets/crests/crystal-palace.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 53968,
+   "colors": [
+    "#0152A4",
+    "#DCE2E5"
+   ]
+  },
+  {
+   "club": "Fulham",
+   "slug": "fulham",
+   "file": "assets/crests/fulham.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 19632,
+   "colors": [
+    "#FFFFFF",
+    "#000000"
+   ]
+  },
+  {
+   "club": "Brentford",
+   "slug": "brentford",
+   "file": "assets/crests/brentford.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 52184,
+   "colors": [
+    "#C20000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "club": "Nottingham Forest",
+   "slug": "nottingham-forest",
+   "file": "assets/crests/nottingham-forest.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 31290,
+   "colors": [
+    "#E70000",
+    "#DD0000"
+   ]
+  },
+  {
+   "club": "Leeds United",
+   "slug": "leeds",
+   "file": "assets/crests/leeds.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 35190,
+   "colors": [
+    "#FEDE1A",
+    "#015EA9"
+   ]
+  },
+  {
+   "club": "Southampton",
+   "slug": "southampton",
+   "file": "assets/crests/southampton.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 48140,
+   "colors": [
+    "#252220",
+    "#CB2339"
+   ]
+  },
+  {
+   "club": "Bournemouth",
+   "slug": "bournemouth",
+   "file": "assets/crests/bournemouth.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 25360,
+   "colors": [
+    "#000000",
+    "#F7F7F6"
+   ]
+  },
+  {
+   "club": "Athletic Club",
+   "slug": "athletic",
+   "file": "assets/crests/athletic.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 25984,
+   "colors": [
+    "#FFFFFF",
+    "#310C0B"
+   ]
+  },
+  {
+   "club": "Real Sociedad",
+   "slug": "real-sociedad",
+   "file": "assets/crests/real-sociedad.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 52424,
+   "colors": [
+    "#014AA3",
+    "#DB7925"
+   ]
+  },
+  {
+   "club": "Villarreal",
+   "slug": "villarreal",
+   "file": "assets/crests/villarreal.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 49148,
+   "colors": [
+    "#005187",
+    "#FCEC7F"
+   ]
+  },
+  {
+   "club": "Girona",
+   "slug": "girona",
+   "file": "assets/crests/girona.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 78798,
+   "colors": [
+    "#CF0B29",
+    "#FBEAD9"
+   ]
+  },
+  {
+   "club": "Celta Vigo",
+   "slug": "celta",
+   "file": "assets/crests/celta.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 24060,
+   "colors": [
+    "#E6244F",
+    "#96BBCE"
+   ]
+  },
+  {
+   "club": "Osasuna",
+   "slug": "osasuna",
+   "file": "assets/crests/osasuna.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 42796,
+   "colors": [
+    "#CEAE4E",
+    "#300344"
+   ]
+  },
+  {
+   "club": "Espanyol",
+   "slug": "espanyol",
+   "file": "assets/crests/espanyol.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 38592,
+   "colors": [
+    "#E00E17",
+    "#4698B5"
+   ]
+  },
+  {
+   "club": "Roma",
+   "slug": "roma",
+   "file": "assets/crests/roma.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 33726,
+   "colors": [
+    "#FCBA00",
+    "#98072C"
+   ]
+  },
+  {
+   "club": "Lazio",
+   "slug": "lazio",
+   "file": "assets/crests/lazio.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 29212,
+   "colors": [
+    "#D5CA80",
+    "#FFFFFE"
+   ]
+  },
+  {
+   "club": "Atalanta",
+   "slug": "atalanta",
+   "file": "assets/crests/atalanta.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 44018,
+   "colors": [
+    "#FFFFFF",
+    "#2973AF"
+   ]
+  },
+  {
+   "club": "Torino",
+   "slug": "torino",
+   "file": "assets/crests/torino.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 36900,
+   "colors": [
+    "#891F19",
+    "#F9F7F0"
+   ]
+  },
+  {
+   "club": "Bologna",
+   "slug": "bologna",
+   "file": "assets/crests/bologna.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 19404,
+   "colors": [
+    "#1B2939",
+    "#A01E33"
+   ]
+  },
+  {
+   "club": "Genoa",
+   "slug": "genoa",
+   "file": "assets/crests/genoa.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 16372,
+   "colors": [
+    "#AE1A19",
+    "#01253D"
+   ]
+  },
+  {
+   "club": "Sampdoria",
+   "slug": "sampdoria",
+   "file": "assets/crests/sampdoria.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 24488,
+   "colors": [
+    "#FFFFFF",
+    "#000000"
+   ]
+  },
+  {
+   "club": "Bayer Leverkusen",
+   "slug": "leverkusen",
+   "file": "assets/crests/leverkusen.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 47756,
+   "colors": [
+    "#FFFFFF",
+    "#641C1D"
+   ]
+  },
+  {
+   "club": "RB Leipzig",
+   "slug": "rb-leipzig",
+   "file": "assets/crests/rb-leipzig.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 29116,
+   "colors": [
+    "#FFFFFF",
+    "#871B4B"
+   ]
+  },
+  {
+   "club": "Eintracht Frankfurt",
+   "slug": "eintracht",
+   "file": "assets/crests/eintracht.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 46290,
+   "colors": [
+    "#E2020B",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "club": "Wolfsburg",
+   "slug": "wolfsburg",
+   "file": "assets/crests/wolfsburg.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 19550,
+   "colors": [
+    "#FFFFFF",
+    "#025F38"
+   ]
+  },
+  {
+   "club": "Schalke 04",
+   "slug": "schalke",
+   "file": "assets/crests/schalke.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 26282,
+   "colors": [
+    "#FFFFFF",
+    "#00479A"
+   ]
+  },
+  {
+   "club": "Borussia Monchengladbach",
+   "slug": "gladbach",
+   "file": "assets/crests/gladbach.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 17048,
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "club": "VfB Stuttgart",
+   "slug": "stuttgart",
+   "file": "assets/crests/stuttgart.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 40142,
+   "colors": [
+    "#AC041A",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "club": "Werder Bremen",
+   "slug": "werder",
+   "file": "assets/crests/werder.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 22792,
+   "colors": [
+    "#FFFFFF",
+    "#00814A"
+   ]
+  },
+  {
+   "club": "Hamburger SV",
+   "slug": "hamburg",
+   "file": "assets/crests/hamburg.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 6430,
+   "colors": [
+    "#1E5DB3",
+    "#C7D6E9"
+   ]
+  },
+  {
+   "club": "FC Koln",
+   "slug": "koln",
+   "file": "assets/crests/koln.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 42060,
+   "colors": [
+    "#242321",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "club": "Union Berlin",
+   "slug": "union-berlin",
+   "file": "assets/crests/union-berlin.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 20220,
+   "colors": [
+    "#DD1621",
+    "#F8DA48"
+   ]
+  },
+  {
+   "club": "Hoffenheim",
+   "slug": "hoffenheim",
+   "file": "assets/crests/hoffenheim.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 35640,
+   "colors": [
+    "#1861B6",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "club": "Marseille",
+   "slug": "marseille",
+   "file": "assets/crests/marseille.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 59998,
+   "colors": [
+    "#FFFFFF",
+    "#0C61AD"
+   ]
+  },
+  {
+   "club": "Lyon",
+   "slug": "lyon",
+   "file": "assets/crests/lyon.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 26504,
+   "colors": [
+    "#1326AA",
+    "#CFA37D"
+   ]
+  },
+  {
+   "club": "Monaco",
+   "slug": "monaco",
+   "file": "assets/crests/monaco.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 37152,
+   "colors": [
+    "#FE002A",
+    "#C49541"
+   ]
+  },
+  {
+   "club": "Lille",
+   "slug": "lille",
+   "file": "assets/crests/lille.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 32196,
+   "colors": [
+    "#FFFFFF",
+    "#232069"
+   ]
+  },
+  {
+   "club": "Nice",
+   "slug": "nice",
+   "file": "assets/crests/nice.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 58864,
+   "colors": [
+    "#A38F5C",
+    "#2A2423"
+   ]
+  },
+  {
+   "club": "Rennes",
+   "slug": "rennes",
+   "file": "assets/crests/rennes.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 35672,
+   "colors": [
+    "#D83529",
+    "#000000"
+   ]
+  },
+  {
+   "club": "Lens",
+   "slug": "lens",
+   "file": "assets/crests/lens.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 27712,
+   "colors": [
+    "#B71316",
+    "#E1B831"
+   ]
+  },
+  {
+   "club": "Saint-Etienne",
+   "slug": "saint-etienne",
+   "file": "assets/crests/saint-etienne.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 37772,
+   "colors": [
+    "#1E9A5B",
+    "#F3F1E8"
+   ]
+  },
+  {
+   "club": "Gremio",
+   "slug": "gremio",
+   "file": "assets/crests/gremio.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 32778,
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "club": "Internacional",
+   "slug": "internacional",
+   "file": "assets/crests/internacional.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 50998,
+   "colors": [
+    "#FFFFFF",
+    "#E6050F"
+   ]
+  },
+  {
+   "club": "Atletico Mineiro",
+   "slug": "atletico-mineiro",
+   "file": "assets/crests/atletico-mineiro.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 29626,
+   "colors": [
+    "#1E1A17",
+    "#171310"
+   ]
+  },
+  {
+   "club": "Cruzeiro",
+   "slug": "cruzeiro",
+   "file": "assets/crests/cruzeiro.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 61730,
+   "colors": [
+    "#2F529F",
+    "#FCFDFD"
+   ]
+  },
+  {
+   "club": "Vasco da Gama",
+   "slug": "vasco",
+   "file": "assets/crests/vasco.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 28568,
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "club": "Fluminense",
+   "slug": "fluminense",
+   "file": "assets/crests/fluminense.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 32710,
+   "colors": [
+    "#FFFFFF",
+    "#900225"
+   ]
+  },
+  {
+   "club": "Botafogo",
+   "slug": "botafogo",
+   "file": "assets/crests/botafogo.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 15048,
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "club": "Bahia",
+   "slug": "bahia",
+   "file": "assets/crests/bahia.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 55354,
+   "colors": [
+    "#0068B3",
+    "#FEFFFF"
+   ]
+  },
+  {
+   "club": "Racing Club",
+   "slug": "racing",
+   "file": "assets/crests/racing.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 11880,
+   "colors": [
+    "#039CDC",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "club": "San Lorenzo",
+   "slug": "san-lorenzo",
+   "file": "assets/crests/san-lorenzo.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 31636,
+   "colors": [
+    "#283952",
+    "#EC212C"
+   ]
+  },
+  {
+   "club": "Estudiantes",
+   "slug": "estudiantes",
+   "file": "assets/crests/estudiantes.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 10210,
+   "colors": [
+    "#D03245",
+    "#E0DFCB"
+   ]
+  },
+  {
+   "club": "LA Galaxy",
+   "slug": "la-galaxy",
+   "file": "assets/crests/la-galaxy.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 33034,
+   "colors": [
+    "#FADA47",
+    "#12284C"
+   ]
+  },
+  {
+   "club": "LAFC",
+   "slug": "lafc",
+   "file": "assets/crests/lafc.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 21858,
+   "colors": [
+    "#17181C",
+    "#BFA064"
+   ]
+  },
+  {
+   "club": "Seattle Sounders",
+   "slug": "seattle-sounders",
+   "file": "assets/crests/seattle-sounders.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 29098,
+   "colors": [
+    "#50B850",
+    "#0131A0"
+   ]
+  },
+  {
+   "club": "Atlanta United",
+   "slug": "atlanta-united",
+   "file": "assets/crests/atlanta-united.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 40762,
+   "colors": [
+    "#2D2926",
+    "#5D4F36"
+   ]
+  },
+  {
+   "club": "New York City FC",
+   "slug": "nycfc",
+   "file": "assets/crests/nycfc.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 51948,
+   "colors": [
+    "#A0D5FF",
+    "#000228"
+   ]
+  },
+  {
+   "club": "Portland Timbers",
+   "slug": "portland-timbers",
+   "file": "assets/crests/portland-timbers.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 37264,
+   "colors": [
+    "#0C421D",
+    "#F5F2E4"
+   ]
+  },
+  {
+   "club": "Toronto FC",
+   "slug": "toronto-fc",
+   "file": "assets/crests/toronto-fc.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 31800,
+   "colors": [
+    "#B60D34",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "club": "Orlando City",
+   "slug": "orlando-city",
+   "file": "assets/crests/orlando-city.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 40274,
+   "colors": [
+    "#FCE8AF",
+    "#633493"
+   ]
+  },
+  {
+   "club": "Al Hilal",
+   "slug": "al-hilal",
+   "file": "assets/crests/al-hilal.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 13690,
+   "colors": [
+    "#0028F1",
+    "#0029F8"
+   ]
+  },
+  {
+   "club": "Al Ittihad",
+   "slug": "al-ittihad",
+   "file": "assets/crests/al-ittihad.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 25130,
+   "colors": [
+    "#FEF100",
+    "#2B221C"
+   ]
+  },
+  {
+   "club": "Al Ahli",
+   "slug": "al-ahli",
+   "file": "assets/crests/al-ahli.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 37046,
+   "colors": [
+    "#F8FAFA",
+    "#018357"
+   ]
+  },
+  {
+   "club": "Fenerbahce",
+   "slug": "fenerbahce",
+   "file": "assets/crests/fenerbahce.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 48152,
+   "colors": [
+    "#1F3854",
+    "#FDFDFD"
+   ]
+  },
+  {
+   "club": "Besiktas",
+   "slug": "besiktas",
+   "file": "assets/crests/besiktas.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 25792,
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "club": "Trabzonspor",
+   "slug": "trabzonspor",
+   "file": "assets/crests/trabzonspor.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 19396,
+   "colors": [
+    "#5B0E28",
+    "#76B7E5"
+   ]
+  },
+  {
+   "club": "Ajax",
+   "slug": "ajax",
+   "file": "assets/crests/ajax.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 83370,
+   "colors": [
+    "#FFFFFF",
+    "#ADACAE"
+   ]
+  },
+  {
+   "club": "PSV Eindhoven",
+   "slug": "psv",
+   "file": "assets/crests/psv.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 37552,
+   "colors": [
+    "#C0A06A",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "club": "Feyenoord",
+   "slug": "feyenoord",
+   "file": "assets/crests/feyenoord.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 42446,
+   "colors": [
+    "#010100",
+    "#9E8B64"
+   ]
+  },
+  {
+   "club": "AZ Alkmaar",
+   "slug": "az",
+   "file": "assets/crests/az.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 17370,
+   "colors": [
+    "#DD0022",
+    "#1A171A"
+   ]
+  },
+  {
+   "club": "Braga",
+   "slug": "braga",
+   "file": "assets/crests/braga.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 43336,
+   "colors": [
+    "#7F7C59",
+    "#4D433D"
+   ]
+  },
+  {
+   "club": "Vitoria Guimaraes",
+   "slug": "vitoria-guimaraes",
+   "file": "assets/crests/vitoria-guimaraes.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 38162,
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "club": "Celtic",
+   "slug": "celtic",
+   "file": "assets/crests/celtic.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 55318,
+   "colors": [
+    "#009A46",
+    "#113D24"
+   ]
+  },
+  {
+   "club": "Aberdeen",
+   "slug": "aberdeen",
+   "file": "assets/crests/aberdeen.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 51214,
+   "colors": [
+    "#E10816",
+    "#DF020F"
+   ]
+  },
+  {
+   "club": "Hearts",
+   "slug": "hearts",
+   "file": "assets/crests/hearts.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 56398,
+   "colors": [
+    "#9F1931",
+    "#D6D9DB"
+   ]
+  },
+  {
+   "club": "Chivas Guadalajara",
+   "slug": "chivas",
+   "file": "assets/crests/chivas.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 52310,
+   "colors": [
+    "#072A55",
+    "#744153"
+   ]
+  },
+  {
+   "club": "Cruz Azul",
+   "slug": "cruz-azul",
+   "file": "assets/crests/cruz-azul.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 29958,
+   "colors": [
+    "#363761",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "club": "Pumas UNAM",
+   "slug": "pumas",
+   "file": "assets/crests/pumas.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 15304,
+   "colors": [
+    "#122346",
+    "#B3AA91"
+   ]
+  },
+  {
+   "club": "Tigres UANL",
+   "slug": "tigres",
+   "file": "assets/crests/tigres.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 25980,
+   "colors": [
+    "#015EA9",
+    "#FBAF36"
+   ]
+  },
+  {
+   "club": "Monterrey",
+   "slug": "monterrey",
+   "file": "assets/crests/monterrey.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 25054,
+   "colors": [
+    "#0A2241",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "club": "Club Leon",
+   "slug": "leon",
+   "file": "assets/crests/leon.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 32266,
+   "colors": [
+    "#D8BF51",
+    "#127B51"
+   ]
+  },
+  {
+   "club": "Urawa Reds",
+   "slug": "urawa-reds",
+   "file": "assets/crests/urawa-reds.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 50724,
+   "colors": [
+    "#350810",
+    "#E2012B"
+   ]
+  },
+  {
+   "club": "Kashima Antlers",
+   "slug": "kashima-antlers",
+   "file": "assets/crests/kashima-antlers.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 33448,
+   "colors": [
+    "#BEB2AA",
+    "#B71840"
+   ]
+  },
+  {
+   "club": "Vissel Kobe",
+   "slug": "vissel-kobe",
+   "file": "assets/crests/vissel-kobe.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 21774,
+   "colors": [
+    "#FFFFFF",
+    "#050001"
+   ]
+  },
+  {
+   "club": "Yokohama F. Marinos",
+   "slug": "yokohama-f-marinos",
+   "file": "assets/crests/yokohama-f-marinos.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 51300,
+   "colors": [
+    "#B68D4B",
+    "#4E3279"
+   ]
+  },
+  {
+   "club": "Gamba Osaka",
+   "slug": "gamba-osaka",
+   "file": "assets/crests/gamba-osaka.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 10228,
+   "colors": [
+    "#FFFFFF",
+    "#064582"
+   ]
+  },
+  {
+   "club": "Anderlecht",
+   "slug": "anderlecht",
+   "file": "assets/crests/anderlecht.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 70366,
+   "colors": [
+    "#603090",
+    "#E5A16F"
+   ]
+  },
+  {
+   "club": "Club Brugge",
+   "slug": "club-brugge",
+   "file": "assets/crests/club-brugge.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 62498,
+   "colors": [
+    "#000101",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "club": "Olympiacos",
+   "slug": "olympiacos",
+   "file": "assets/crests/olympiacos.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 58008,
+   "colors": [
+    "#E1282E",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "club": "Shakhtar Donetsk",
+   "slug": "shakhtar",
+   "file": "assets/crests/shakhtar.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 31232,
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "club": "Colo-Colo",
+   "slug": "colo-colo",
+   "file": "assets/crests/colo-colo.webp",
+   "source_url": null,
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 35284,
+   "colors": [
+    "#183C66",
+    "#F7E2CC"
+   ]
+  },
+  {
+   "club": "Krasnodar",
+   "slug": "krasnodar",
+   "file": "assets/crests/krasnodar.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/3/30/FC_Krasnodar_logo.svg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:FC_Krasnodar_logo.svg",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 16804,
+   "colors": [
+    "#016037",
+    "#060C09"
+   ]
+  },
+  {
+   "club": "Rostov",
+   "slug": "rostov",
+   "file": "assets/crests/rostov.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/a/a2/FC_Rostov_logo.svg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:FC_Rostov_logo.svg",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 15772,
+   "colors": [
+    "#FFEE00",
+    "#244495"
+   ]
+  },
+  {
+   "club": "Shanghai Shenhua",
+   "slug": "shanghai-shenhua",
+   "file": "assets/crests/shanghai-shenhua.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/d/d3/Shanghai_Shenhua_F.C.svg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:Shanghai_Shenhua_F.C.svg",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 44668,
+   "colors": [
+    "#115199",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "club": "Chengdu Rongcheng",
+   "slug": "chengdu-rongcheng",
+   "file": "assets/crests/chengdu-rongcheng.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/c/c4/Chengdu_Rongcheng_F.C.svg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:Chengdu_Rongcheng_F.C.svg",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 41406,
+   "colors": [
+    "#BD0203",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "club": "Wuhan Three Towns",
+   "slug": "wuhan-three-towns",
+   "file": "assets/crests/wuhan-three-towns.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/5/58/Wuhan_Three_Towns_F.C.svg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:Wuhan_Three_Towns_F.C.svg",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file) - draft use only",
+   "bytes": 24940,
+   "colors": [
+    "#FDFDFE",
+    "#21257A"
+   ]
+  }
+ ],
+ "retired_note": "Clubs dropped from config.js CLUBS for the English-first launch (2026-11-10): the files stay in assets/crests, nothing loads them (main.js / reel-fx.js / shirt.js read crests only).",
+ "retired": [
+  {
+   "club": "Локомотив",
+   "slug": "lokomotiv",
+   "file": "assets/crests/lokomotiv.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/9/93/FC_Lokomotiv_Moscow_logo.svg",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:FC_Lokomotiv_Moscow_logo.svg",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file)",
+   "bytes": 35707
+  },
+  {
+   "club": "Динамо",
+   "slug": "dynamo",
+   "file": "assets/crests/dynamo.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/e/e7/Dynamo_Moscow_logo.svg",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:Dynamo_Moscow_logo.svg",
+   "license_note": "PD",
+   "bytes": 15934
+  },
+  {
+   "club": "Краснодар",
+   "slug": "krasnodar",
+   "file": "assets/crests/krasnodar.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/3/30/FC_Krasnodar_logo.svg",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:FC_Krasnodar_logo.svg",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file)",
+   "bytes": 53930
+  },
+  {
+   "club": "Ростов",
+   "slug": "rostov",
+   "file": "assets/crests/rostov.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/a/a2/FC_Rostov_logo.svg",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:FC_Rostov_logo.svg",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file)",
+   "bytes": 45273
+  },
+  {
+   "club": "Рубин",
+   "slug": "rubin",
+   "file": "assets/crests/rubin.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/3/32/FC_Rubin_Kazan_logo.svg",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:FC_Rubin_Kazan_logo.svg",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file)",
+   "bytes": 31038
+  },
+  {
+   "club": "Ахмат",
+   "slug": "akhmat",
+   "file": "assets/crests/akhmat.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/3/36/Akhmat_Grozny_logo.png",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:Akhmat_Grozny_logo.png",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file)",
+   "bytes": 64549
+  },
+  {
+   "club": "Крылья Советов",
+   "slug": "krylia-sovetov",
+   "file": "assets/crests/krylia-sovetov.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/9/92/PFC_Krylia_Sovetov_Samara.svg",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:PFC_Krylia_Sovetov_Samara.svg",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file)",
+   "bytes": 15093
+  },
+  {
+   "club": "Урал",
+   "slug": "ural",
+   "file": "assets/crests/ural.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/8/8f/FC_Ural_Yekaterinburg_logo.svg",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:FC_Ural_Yekaterinburg_logo.svg",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file)",
+   "bytes": 40195
+  },
+  {
+   "club": "Факел",
+   "slug": "fakel",
+   "file": "assets/crests/fakel.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/a/ad/FC_Fakel_Voronezh_logo.png",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:FC_Fakel_Voronezh_logo.png",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file)",
+   "bytes": 44766
+  },
+  {
+   "club": "Шаньдун Тайшань",
+   "slug": "shandong",
+   "file": "assets/crests/shandong.webp",
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/8/88/Shandong_Taishan_Football_Club.svg",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:Shandong_Taishan_Football_Club.svg",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file)",
+   "bytes": 28518
+  },
+  {
+   "club": "Гуанчжоу",
+   "slug": "guangzhou",
+   "file": null,
+   "source_url": "https://upload.wikimedia.org/wikipedia/en/9/98/Guangzhou_Evergrande_Taobao_logo.svg",
+   "wiki_file_page": "https://en.wikipedia.org/wiki/File:Guangzhou_Evergrande_Taobao_logo.svg",
+   "license_note": "Fair use (non-free logo, en.wikipedia fair-use file)",
+   "bytes": 58167,
+   "note": "club dissolved 2025-01-06; crest file deleted on 2026-11-10 (Rangers took the slot)"
+  }
+ ],
+ "missing": []
+}

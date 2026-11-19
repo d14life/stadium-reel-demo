@@ -1,0 +1,8 @@
+player.glb is derived from two Quaternius packs, both released under CC0 1.0 Universal (public domain dedication, https://creativecommons.org/publicdomain/zero/1.0/):
+
+1. Universal Base Characters [Standard] - Superhero_Male_FullBody mesh and rig. Source: https://quaternius.com/packs/universalbasecharacters.html
+   Page wording: "License CC0"; "Free to use in personal, educational and commercial projects. (CC0 License)". Pack License_Standard.txt: "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication".
+2. Universal Animation Library [Standard] (v1, UAL1_Standard.glb) - animation clips idle, jog, run (Sprint), walk, celebrate (Dance), slide (Roll), jump start/loop/land, fall (Death01), hit (Hit_Chest). Source: https://quaternius.itch.io/universal-animation-library
+   Page wording: "Free to use in personal, educational and commercial projects. (CC0 License)"; asset licence "Creative Commons Zero v1.0 Universal". Pack License.txt: "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication".
+
+Modifications: mesh decimated to ~1.5k triangles, finger bones merged into the hands, single material with a 8x1 palette texture, only the clips listed above kept and renamed. Models by Quaternius (https://www.patreon.com/quaternius). Credit is not required.
