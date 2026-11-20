@@ -162,7 +162,7 @@ if (vMe < 0.5 && uCone.x > 0.5 && smoothstep(`+$.seatPov.nf[3].toFixed(2)+", "+(
         normal = normalize(abs(det) * normal - sign(det) * (dFdx(h) * r1 + dFdy(h) * r2)); }`),o.vertexShader=`varying vec3 vOP; varying float vCloth;
 `+o.vertexShader.replace("#include <begin_vertex>",`#include <begin_vertex>
  vOP = position; vCloth = aPart < 1.5 ? 1.0 : 0.0;`));let s=bt,n=h=>h.toFixed(4),r=h=>`mat3(1.0, 0.0, 0.0, 0.0, ${n(Math.cos(h))}, ${n(Math.sin(h))}, 0.0, ${n(-Math.sin(h))}, ${n(Math.cos(h))})`,u=h=>`mat3(${n(Math.cos(h))}, ${n(Math.sin(h))}, 0.0, ${n(-Math.sin(h))}, ${n(Math.cos(h))}, 0.0, 0.0, 0.0, 1.0)`,l=`float bCls = mod(floor(aSkin / 32.0 + 0.001), 4.0), bVA = step(127.5, mod(aSkin, 256.0)), bHeld = step(15.5, mod(aSkin, 32.0)), bRest = step(7.5, mod(aSkin, 16.0)) * (1.0 - bHeld), bArm = floor(color.b * 0.1 + 0.05), bSx = bArm < 2.5 ? 1.0 : -1.0, bFore = mod(bArm, 2.0) < 0.5 ? 1.0 : 0.0;
-      cNS = bCls; cAR = bRest; cPl = step(255.5, aSkin);   /* fix-entrance3: aSkin + 256 = a plaza person (standing), + 512 = mid-stride */   // fix70: class = aSkin / 32 (0 crowd, 1 VIP / legend, 2 crest / card, 3 ultras); fix88: + 128 = the VIP-box armchair (its armrest lower, shorter, further out)
+      cNS = bCls; cAR = bRest; cPl = step(255.5, mod(aSkin, 1024.0));   /* fix-entrance3: aSkin + 256 = a plaza person (standing), + 512 = mid-stride */   // fix70: class = aSkin / 32 (0 crowd, 1 VIP / legend, 2 crest / card, 3 ultras); fix88: + 128 = the VIP-box armchair (its armrest lower, shorter, further out)
       #ifdef USE_INSTANCING
         crowdPrep(instanceMatrix[3].xz);
       #else
@@ -207,7 +207,7 @@ if (vMe < 0.5 && uCone.x > 0.5 && smoothstep(`+$.seatPov.nf[3].toFixed(2)+", "+(
         vec3 sp = th > 0.5 ? vec3(tax + (transformed.x - tax) * tg, ${n(m0[1]+.5-(j-J)*Q.kt)} + (${n(j)} - transformed.z) * ${n(Q.kt)}, ${n(j)} + (y0 - 0.5) * tg)   /* fix51: thigh swung about the knee, KT shorter */
           : shin > 0.5 ? vec3(transformed.x, transformed.y < ${n(Q.ya)} ? transformed.y : ${n(Q.ya)} + (transformed.y - ${n(Q.ya)}) * ${n(Q.ks)}, transformed.z) : transformed + cSTEP;   /* fix51: shin KS shorter above the ankle, shoes untouched; pelvis + body step */
         transformed = mix(transformed, sp, st);
-        if (aSkin > 511.5) { float wa = (0.2 + 0.2 * cH1) * (cH2 > 0.5 ? 1.0 : -1.0);   /* fix-entrance3 walker: each leg swings about its standing hip joint, opposite ways; the body drops by the stride's lost height (feet stay on the ground) */
+        if (mod(aSkin, 1024.0) > 511.5) { float wa = (0.2 + 0.2 * cH1) * (cH2 > 0.5 ? 1.0 : -1.0);   /* fix-entrance3 walker: each leg swings about its standing hip joint, opposite ways; the body drops by the stride's lost height (feet stay on the ground) */
           if (th > 0.5 || shin > 0.5) { vec3 hp = vec3(0.0, ${n(m0[1]+.5)}, ${n(j)}); transformed = hp + cRx(sign(transformed.x) * wa) * (transformed - hp); }
           transformed.y -= ${n(m0[1]+.5-.02)} * (1.0 - cos(wa)); }
         transformed += cLift(y0, kk); }
