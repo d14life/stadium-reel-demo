@@ -9,10 +9,10 @@
 <title>Intergalactic Stadium</title>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" crossorigin>
-<link rel="preload" as="script" crossorigin href="js/main.js?v=56d8859">
+<link rel="preload" as="script" crossorigin href="js/main.js?v=4229702">
+<link rel="preload" as="script" crossorigin href="js/c-QUZ2LAQR.js">
+<link rel="preload" as="script" crossorigin href="js/c-BYGB2O6G.js">
 <link rel="preload" as="script" crossorigin href="js/c-5Z2LRC2R.js">
-<link rel="preload" as="script" crossorigin href="js/c-BQPKLYPW.js">
-<link rel="preload" as="script" crossorigin href="js/c-NQNJQTPD.js">
 <style>
   html,body{margin:0;height:100%;background:#000;overflow:hidden}
   canvas{display:block;width:100%;height:100%;touch-action:none}
@@ -24,8 +24,8 @@
   #panel small{display:block;margin-top:8px;opacity:.6}
   #panel{z-index:11}
 </style>
-<link rel="stylesheet" href="hud.css?v=56d8859" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="join.css?v=56d8859" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="hud.css?v=4229702" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="join.css?v=4229702" media="print" onload="this.media='all'">
 </head>
 <body>
 <!--LOADER-->
@@ -55,7 +55,7 @@ let L='en';try{const q=new URLSearchParams(location.search).get('lang'),s=localS
 const d=T[L];$('bl').textContent=d[0];$('bm2').textContent=d[1];$('brt').textContent=d[2];
 const rm=matchMedia('(prefers-reduced-motion:reduce)').matches,X=+b.dataset.x,TAU=Math.PI*2;
 // ---- progress (same driver in A/B/C): tg = real bytes seen / data-x (as index.html), done = scene ready ----
-let tot=0,tg=.03,cu=0,done=0,ff=0,full=0,shown=-1;
+let tot=0,tg=.03,cu=0,done=0,ff=0,hf=0,full=0,shown=-1;
 const feed=n=>{tot+=n;tg=Math.max(tg,Math.min(.96,.03+.93*tot/X))};
 try{new PerformanceObserver(l=>{for(const e of l.getEntries())feed(e.encodedBodySize||e.transferSize||2e4)}).observe({type:'resource',buffered:true})}catch(e){}
 // shown %: 0 -> 60 in FAST ms, then chases real (mapped into 60..98), and while real is stuck it still creeps, slower the further ahead it is; 99 max until done
@@ -117,13 +117,13 @@ const ease=u=>1-Math.pow(1-u,3),draw=(now,p)=>{
 
 const t0=performance.now(),HOLD=rm?150:520;let last=t0;
 const tick=now=>{if(!b.isConnected)return;const dt=Math.min(100,now-last);last=now;const r=window.__stadium&&window.__stadium.renderer;
-if(!done&&r&&r.info.render.frame>1){ff=ff||performance.now();const sc=window.__stadium.scene,E=sc&&sc.getObjectByName('earth');const cf=window.__stadium.crowdF;if(performance.now()-ff>15e3||(cf!=null&&r.info.render.frame>cf+1&&(!E||E.visible))){done=1;tg=1;window.__firstFrame=ff}}
+if(!done&&r&&r.info.render.frame>1){ff=ff||performance.now();const sc=window.__stadium.scene,E=sc&&sc.getObjectByName('earth');const cf=window.__stadium.crowdF,F=r.info.render.frame;const H=window.__hq;if(H&&H.ready&&!hf)hf=F;const hok=!window.__gfx||(hf&&F>hf+2)||(!H&&window.__bootT&&window.__bootT.hqLayer!=null);const why=performance.now()-ff>15e3?'15 s after first frame':cf!=null&&F>cf+1&&(!E||E.visible)&&hok?'scene ready':'';if(why){done=1;tg=1;window.__firstFrame=ff;console.log('[boot] loader done ('+why+') t='+Math.round(now))}}if(!done&&now-t0>25e3&&r){done=1;tg=1;console.warn('[boot] loader done (hard fallback 25 s, frame '+r.info.render.frame+')')}
 step(now-t0,dt);draw(now,cu);
 if(cu==1&&!full)full=now;
 if(full&&now-full>HOLD){b.classList.add('d');setTimeout(()=>b.remove(),950);return}
 if(!done&&now-t0>45e3)b.classList.add('x');
 requestAnimationFrame(tick)};
-window.__boot={err:m=>{$('bm2').textContent=m;b.classList.add('x')}};requestAnimationFrame(tick)})();
+window.__boot={err:m=>{$('bm2').textContent=m;b.classList.add('x')}};addEventListener('error',e=>{if(!done&&e.filename&&/\.js/.test(e.filename))window.__boot.err(d[1])});addEventListener('unhandledrejection',e=>{if(!done&&!(window.__stadium&&window.__stadium.renderer)){console.warn('[boot] unhandled',e.reason);window.__boot.err(d[1])}});requestAnimationFrame(tick)})();
 </script>
 </div>
 <!--/LOADER-->
@@ -151,7 +151,7 @@ window.__gfx = window.__gfxLevel !== 'off';</script>
   m.textContent = JSON.stringify({ imports: { three: base + 'build/three.module.js', 'three/addons/': base + 'examples/jsm/' } });
   document.head.append(m);
   for (const s of ['main', 'join', 'sound', 'tiermap', 'editor']) {
-    const e = document.createElement('script'); e.type = 'module'; e.async = false; e.src = 'js/' + s + '.js?v=56d8859'; document.body.append(e);
+    const e = document.createElement('script'); e.type = 'module'; e.async = false; e.src = 'js/' + s + '.js?v=4229702'; document.body.append(e);
   }
 })();
 </script>
