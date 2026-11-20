@@ -13,3 +13,5 @@ All from Poly Haven (https://polyhaven.com), licence CC0 1.0. 1K jpg diffuse / n
 | turf/ | leafy_grass | pitch (over the mown stripe shader) |
 | membrane/ | rough_linen | roof membrane |
 | paving/ | granular_concrete | plaza paving |
+| vipwood/ (VIP) | american_walnut_veneer | VIP box panelling, slats, bar, pillar cladding (vip-look.js) |
+| stucco/ (VIP) | white_stucco | VIP box plaster walls + ceiling (vip-look.js) |
