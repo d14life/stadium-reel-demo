@@ -9,10 +9,10 @@
 <title>Intergalactic Stadium</title>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" crossorigin>
-<link rel="preload" as="script" crossorigin href="js/main.js?v=8422793">
-<link rel="preload" as="script" crossorigin href="js/c-M5ODQHK7.js">
+<link rel="preload" as="script" crossorigin href="js/main.js?v=21f9af1">
+<link rel="preload" as="script" crossorigin href="js/c-DYDMDBXQ.js">
 <link rel="preload" as="script" crossorigin href="js/c-5Z2LRC2R.js">
-<link rel="preload" as="script" crossorigin href="js/c-M5ODQHK7.js">
+<link rel="preload" as="script" crossorigin href="js/c-DYDMDBXQ.js">
 <style>
   html,body{margin:0;height:100%;background:#000;overflow:hidden}
   canvas{display:block;width:100%;height:100%;touch-action:none}
@@ -24,8 +24,8 @@
   #panel small{display:block;margin-top:8px;opacity:.6}
   #panel{z-index:11}
 </style>
-<link rel="stylesheet" href="hud.css?v=8422793" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="join.css?v=8422793" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="hud.css?v=21f9af1" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="join.css?v=21f9af1" media="print" onload="this.media='all'">
 </head>
 <body>
 <!--LOADER-->
@@ -34,6 +34,9 @@
 #boot{position:fixed;inset:0;z-index:100;overflow:hidden;background:#0b1020;color:#F4F5F7;--f:-apple-system,Inter,Arial,sans-serif;transition:opacity .7s cubic-bezier(.4,0,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}
 #boot.d{opacity:0;transform:scale(1.04);pointer-events:none}
 #boot canvas{position:absolute;inset:0;width:100%;height:100%}
+#bp{position:absolute;inset:0;pointer-events:none;contain:strict}
+#bp i{position:absolute;left:0;top:0;border-radius:50%;width:var(--d);height:var(--d);margin:calc(var(--d)/-2) 0 0 calc(var(--d)/-2);transform:scale(0)}
+#bp i.r{width:var(--r);height:var(--r);margin:calc(var(--r)/-2) 0 0 calc(var(--r)/-2);box-sizing:border-box;border:var(--w) solid;transform:none;opacity:0}
 #boot .c{position:absolute;left:0;right:0;top:var(--ty,70%);display:flex;flex-direction:column;align-items:center;gap:10px}
 #boot .c b{font:700 46px/1 Oswald,"Arial Narrow",Arial,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:.01em}
 #boot .c b i{font-style:normal;font-size:.46em;color:#E10600;margin-left:3px;vertical-align:.78em}
@@ -44,7 +47,7 @@
 #boot .m button{font:inherit;color:#F4F5F7;background:none;border:0;padding:4px 6px;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
 @media (prefers-reduced-motion:reduce){#boot,#boot *{animation:none!important;transition-duration:.2s!important}#boot.d{transform:none}}
 </style>
-<canvas id="bc" aria-hidden="true"></canvas>
+<canvas id="bc" aria-hidden="true"></canvas><div id="bp" aria-hidden="true"></div>
 <div class="c" role="progressbar" aria-valuemin="0" aria-valuemax="100" id="bpb"><b id="bn">0<i>%</i></b><small id="bl"></small></div>
 <div class="m"><span id="bm2"></span> <button onclick="location.reload()" id="brt"></button></div>
 <script>
@@ -75,12 +78,13 @@ for(let t=0;t<3;t++)for(let j=0;j<3;j++){const o=tin(t)+SP*(j+.5),P=4*(PL+PW)+TA
 const N=seats.length,order=seats.slice().sort((p,q)=>p.k-q.k),POP=340;let nf=0;
 
 // ---- layers: S = static (bg, bowl, pitch, empty seats, ring), G = ring glow (alpha follows progress) ----
-const cv=$('bc'),cx=cv.getContext('2d'),S=document.createElement('canvas'),G=document.createElement('canvas');let K=1,M=[1,0,0,1,0,0];
+const cv=$('bc'),cx=cv.getContext('2d'),S=document.createElement('canvas'),G=document.createElement('canvas'),Z=document.createElement('canvas');let K=1,K0=1,ns=0,dn=-1,M=[1,0,0,1,0,0];
 const rr=(c,o)=>c.roundRect(-PL-o,-PW-o,2*(PL+o),2*(PW+o),Math.max(0,o));
-const layout=()=>{const W=innerWidth,H=innerHeight,dp=Math.min(3,devicePixelRatio||1),por=H>W,ex=PL+DR+RW,ey=PW+DR+RW,
+const layout=()=>{if(!innerWidth||!innerHeight)return;   // stuck97: a 0 px window (hidden tab / pane, mid-resize) gave 0x0 layers, drawImage(S) threw every tick and the loader froze at its last % for good; keep the last good layers
+  const W=innerWidth,H=innerHeight,dp=Math.min(3,devicePixelRatio||1),por=H>W,ex=PL+DR+RW,ey=PW+DR+RW,
   sc=Math.min(3,por?Math.min((W-32)/(2*ey),H*.62/(2*ex)):Math.min(W*.8/(2*ex),(H-150)/(2*ey))),hh=(por?ex:ey)*sc,top=Math.max(16,(H-2*hh-96)/2-H*.02);
-  for(const c of[cv,S,G]){c.width=Math.round(W*dp);c.height=Math.round(H*dp)}
-  K=sc*dp;const cxp=W/2*dp,cyp=(top+hh)*dp;M=por?[0,-K,K,0,cxp,cyp]:[K,0,0,K,cxp,cyp];b.style.setProperty('--ty',top+2*hh+22+'px');
+  for(const c of[cv,S,G,Z]){c.width=Math.round(W*dp);c.height=Math.round(H*dp)}
+  K=sc*dp;K0=dp;const q=$('bp').style;q.setProperty('--d',2*RAD*1.35*sc+'px');q.setProperty('--r',(2*RAD*2.6+.45)*sc+'px');q.setProperty('--w',.45*sc+'px');const cxp=W/2*dp,cyp=(top+hh)*dp;M=por?[0,-K,K,0,cxp,cyp]:[K,0,0,K,cxp,cyp];b.style.setProperty('--ty',top+2*hh+22+'px');
   const s=S.getContext('2d'),g=G.getContext('2d');
   let gr=s.createRadialGradient(cxp,cyp,0,cxp,cyp,Math.max(W,H)*dp*.7);gr.addColorStop(0,'#131c36');gr.addColorStop(.5,'#0b1020');gr.addColorStop(1,'#070a15');s.fillStyle=gr;s.fillRect(0,0,S.width,S.height);
   s.setTransform(...M);
@@ -93,6 +97,7 @@ const layout=()=>{const W=innerWidth,H=innerHeight,dp=Math.min(3,devicePixelRati
   s.lineWidth=RW;s.strokeStyle='#E10600';s.shadowColor='#E10600';s.shadowBlur=10*dp;s.beginPath();rr(s,DR);s.stroke();s.shadowBlur=0;   // the red ring: crisp core + inner highlight
   s.lineWidth=.8;s.strokeStyle='rgba(255,130,115,.75)';s.beginPath();rr(s,DR-RW*.18);s.stroke();
   g.setTransform(...M);g.lineWidth=RW*1.6;g.strokeStyle='rgba(225,6,0,.9)';g.shadowColor='#ff1a0d';g.shadowBlur=22*dp;g.beginPath();rr(g,DR);g.stroke();g.shadowBlur=40*dp;g.lineWidth=RW;g.stroke();
+  const z=Z.getContext('2d');z.setTransform(...M);for(let i=0;i<ns;i++)seat(z,order[i]);dn=-1;   // resize: re-lay the landed seats
 };
 // pitch: 18 mower passes (seams on the goal lines + halfway, as grass.js), colours = the app's turf (grass.js base 0.017/0.128/0.020 linear, +-25 % stripe) in sRGB, floodlight sheen, white paint
 const pitch=s=>{const RX=PL+5,RY=PW+4.5,pw=105/18;let gr;s.save();s.beginPath();s.rect(-RX,-RY,2*RX,2*RY);s.clip();
@@ -105,15 +110,31 @@ const pitch=s=>{const RX=PL+5,RY=PW+4.5,pw=105/18;let gr;s.save();s.beginPath();
   for(const[qx,qy]of[[-1,-1],[1,-1],[-1,1],[1,1]])am(qx*PL,qy*PW,1,Math.atan2(-qy,-qx)-Math.PI/4,Math.PI/2);
   s.stroke();s.beginPath();for(const x of[0,-PL+11,PL-11]){s.moveTo(x+.5,0);s.arc(x,0,.5,0,TAU)}s.fill()};
 layout();addEventListener('resize',layout);
+// pop-freeze (Damir 2026-11-21: "the animation stops mid-pop, looks stuck"): the canvas pop below runs on rAF, so every main-thread block (module eval, shader compile, grass build: 0.4-1.6 s on a slow CPU)
+// froze half-grown circles mid-air. In-flight pops now play on a pool of DOM dots animated with WAAPI transform/opacity = compositor-only, so they finish through a block and the bowl
+// comes to rest (every circle landed) instead of freezing mid-pop. Same sizes / colours / easing as the canvas pop; the canvas takes over the seat when it settles. Pool empty = canvas pop (old path).
+const bp=$('bp'),EZ='cubic-bezier(.33,1,.68,1)',pool=[];   // EZ = ease() below (out-cubic)
+const KD=[{transform:'scale(0)',easing:EZ},{transform:'scale(1)',offset:.55,easing:EZ},{transform:'scale('+1/1.35+')'}],KR=[{transform:'scale('+1/2.6+')',opacity:.6},{transform:'scale(1)',opacity:0}],O={duration:POP,fill:'forwards'};
+let made=0;const mk=()=>{const d=document.createElement('i'),r=document.createElement('i');r.className='r';bp.append(d,r);made++;return{d,r,a:new Animation(new KeyframeEffect(d,KD,O)),b:new Animation(new KeyframeEffect(r,KR,O))}};   // built once, replayed per pop: re-parsing keyframes per pop cost ~0.3 s of main thread per load at 4x CPU throttle
+const DP=typeof KeyframeEffect=='function'&&'translate' in bp.style;   // old Safari (<14.1: no WAAPI constructors / individual translate) = canvas pops, never a throw in the rAF loop
+const popDom=(s,now)=>{const e=DP&&(pool.pop()||(made<64?mk():null));if(!e)return;   // ponytail: 64 in flight covers the steady pace; a catch-up burst past that pops on the canvas (old path)
+  const X=(M[0]*s.x+M[2]*s.y+M[4])/K0,Y=(M[1]*s.x+M[3]*s.y+M[5])/K0,c=PAL[s.c];
+  e.d.style.translate=e.r.style.translate=X+'px '+Y+'px';e.d.style.background=c;e.r.style.borderColor=c;
+  e.a.startTime=e.b.startTime=now;s.e=e};   // rAF time == document.timeline time: DOM pop and canvas settle stay on the same clock
+const popEnd=s=>{const e=s.e;e.a.cancel();e.b.cancel();s.e=null;pool.push(e)};
 
+// landed seats live on their own layer Z, drawn once when they land (dot + tiny sheen: a dot reads as a body, not a pixel) instead of re-filling ~800 arcs x2 every frame;
+// that saving pays for the DOM pops above (measured at 4x CPU throttle, docs in the commit)
+const seat=(z,s)=>{z.fillStyle=PAL[s.c];z.beginPath();z.arc(s.x,s.y,RAD,0,TAU);z.fill();z.fillStyle='rgba(255,255,255,.38)';z.beginPath();z.arc(s.x-RAD*.25,s.y+RAD*.3,RAD*.42,0,TAU);z.fill()};
 const ease=u=>1-Math.pow(1-u,3),draw=(now,p)=>{
-  const n=p>=1?N:Math.min(N-1,Math.round(p*N));for(;nf<n;nf++)order[nf].t0=rm?now-POP:now;   // a few seats per frame: the smoothed progress sets the pace
-  cx.setTransform(1,0,0,1,0,0);cx.drawImage(S,0,0);cx.globalAlpha=.3+.4*p;cx.drawImage(G,0,0);cx.globalAlpha=1;cx.setTransform(...M);
-  for(let c=0;c<8;c++){cx.fillStyle=PAL[c];cx.beginPath();for(let i=0;i<nf;i++){const s=order[i];if(s.c==c&&now-s.t0>=POP){cx.moveTo(s.x+RAD,s.y);cx.arc(s.x,s.y,RAD,0,TAU)}}cx.fill()}
-  cx.fillStyle='rgba(255,255,255,.38)';cx.beginPath();for(let i=0;i<nf;i++){const s=order[i];if(now-s.t0>=POP){cx.moveTo(s.x+RAD*.17,s.y+RAD*.3);cx.arc(s.x-RAD*.25,s.y+RAD*.3,RAD*.42,0,TAU)}}cx.fill();   // tiny sheen: a dot reads as a body, not a pixel
-  for(let i=nf-1;i>=0&&now-order[i].t0<POP;i--){const s=order[i],u=Math.max(0,(now-s.t0)/POP);const r=RAD*(u<.55?1.35*ease(u/.55):1.35-.35*ease((u-.55)/.45));
-    cx.fillStyle=PAL[s.c];cx.beginPath();cx.arc(s.x,s.y,Math.max(.01,r),0,TAU);cx.fill();cx.strokeStyle=PAL[s.c];cx.globalAlpha=.6*(1-u);cx.lineWidth=.45;cx.beginPath();cx.arc(s.x,s.y,RAD*(1+1.6*u),0,TAU);cx.stroke();cx.globalAlpha=1}
-  const v=p>=1?100:Math.min(99,Math.floor(p*100));if(v!=shown){shown=v;$('bn').firstChild.nodeValue=v;$('bpb').setAttribute('aria-valuenow',v)}};
+  const n=p>=1?N:Math.min(N-1,Math.round(p*N));for(;nf<n;nf++){const s=order[nf];s.t0=rm?now-POP:now;if(!rm)popDom(s,now)}   // a few seats per frame: the smoothed progress sets the pace
+  if(ns<nf&&now-order[ns].t0>=POP){const z=Z.getContext('2d');for(;ns<nf&&now-order[ns].t0>=POP;ns++){const s=order[ns];if(s.e)popEnd(s);seat(z,s)}}   // t0 rises with the index, so landed seats are a prefix
+  const v=p>=1?100:Math.min(99,Math.floor(p*100));let live=0;for(let i=ns;i<nf;i++)if(!order[i].e){live=1;break}
+  if(live||ns!=dn||v!=shown){dn=ns;   // repaint (and re-upload) the full-screen canvas only when it changed: a seat landed, a canvas pop is mid-air, or the glow moved a 1 % step
+  cx.setTransform(1,0,0,1,0,0);cx.drawImage(S,0,0);cx.globalAlpha=.3+.4*p;cx.drawImage(G,0,0);cx.globalAlpha=1;cx.drawImage(Z,0,0);cx.setTransform(...M);
+  for(let i=nf-1;i>=0&&now-order[i].t0<POP;i--){const s=order[i];if(s.e)continue;const u=Math.max(0,(now-s.t0)/POP),r=RAD*(u<.55?1.35*ease(u/.55):1.35-.35*ease((u-.55)/.45));
+    cx.fillStyle=PAL[s.c];cx.beginPath();cx.arc(s.x,s.y,Math.max(.01,r),0,TAU);cx.fill();cx.strokeStyle=PAL[s.c];cx.globalAlpha=.6*(1-u);cx.lineWidth=.45;cx.beginPath();cx.arc(s.x,s.y,RAD*(1+1.6*u),0,TAU);cx.stroke();cx.globalAlpha=1}}
+  if(v!=shown){shown=v;$('bn').firstChild.nodeValue=v;$('bpb').setAttribute('aria-valuenow',v)}};
 
 const t0=performance.now(),HOLD=rm?150:520;let last=t0;
 const tick=now=>{if(!b.isConnected)return;const dt=Math.min(100,now-last);last=now;const r=window.__stadium&&window.__stadium.renderer;
@@ -151,7 +172,7 @@ window.__gfx = window.__gfxLevel !== 'off';</script>
   m.textContent = JSON.stringify({ imports: { three: base + 'build/three.module.js', 'three/addons/': base + 'examples/jsm/' } });
   document.head.append(m);
   for (const s of ['main', 'join', 'sound', 'tiermap', 'editor']) {
-    const e = document.createElement('script'); e.type = 'module'; e.async = false; e.src = 'js/' + s + '.js?v=8422793'; document.body.append(e);
+    const e = document.createElement('script'); e.type = 'module'; e.async = false; e.src = 'js/' + s + '.js?v=21f9af1'; document.body.append(e);
   }
 })();
 </script>
